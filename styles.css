@@ -206,10 +206,21 @@ section {
     border-radius: 6px;
 }
 
+.confirmPasswordRegister{
+    position: absolute;
+    left: 80px;
+    top: 559px;
+    width: 420px;
+    height: 59px;
+    background: #FFFFFF;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+}
+
 .buttonBuatAkun{
     position: absolute;
     left: 80px;
-    top: 567px;
+    top: 650px;
     width: 420px;
     height: 59px;
     background: #181E22;
@@ -226,7 +237,7 @@ section {
     box-sizing: border-box;
     position: absolute;
     left: 80px;
-    top: 642px;
+    top: 717px;
     width: 420px;
     height: 59px;
 
@@ -257,7 +268,7 @@ section {
 .textAkhirRegister{
     position: absolute;
     left: 194px;
-    top: 773px;
+    top: 848px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
