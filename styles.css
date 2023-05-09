@@ -372,7 +372,18 @@ section {
     color: #808080;
     }
     
+/* Wrong Password */
+.wrongPass{
+    position: absolute;
+    left: 80px;
+    top: 283px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FB2047;
+}
 
+/*Carousel Image*/
 .img-carousel{
     top: 0px;
     left: 563px;
