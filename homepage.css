@@ -59,6 +59,16 @@ html{
     width: fit-content;
 }
 
+.go-to-settings {
+    border: 0px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.go-to-settings:hover {
+    background-color: #FCFFD9;
+}
+
 .notification{
     align-items: flex-start;
     background-color: #FFFFFF;
@@ -71,6 +81,10 @@ html{
     padding: 16px;
     position: relative;
     width: fit-content;
+}
+
+.notification:hover {
+    background-color: #FCFFD9;
 }
 
 .iconNotif {
@@ -146,12 +160,51 @@ html{
 .x-active {
     align-items: flex-start;
     border-radius: 8px;
+    border: 0px;
+    background-color: #181E22;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 12px;
     position: relative;
     width: fit-content;
+}
+
+.x-unactive {
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #FCFFD9;
+    border-color: #FCFFD9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    position: relative;
+    width: fit-content;
+}
+
+.x-unactive:hover {
+    border-color: #121926;
+}
+
+.x-unactive:active {
+    background-color: #121926;
+}
+
+.content:active {
+    color: #FCFCFD;
+}
+
+.komunitas:active {
+    font-weight: 700;
+}
+
+.presensi:active {
+    font-weight: 700;
+}
+
+.artikel:active {
+    font-weight: 700;
 }
 
 .content {
@@ -175,16 +228,6 @@ html{
     height: 24px;
     min-width: 24px;
     position: relative;
-}
-
-.bg {
-    background-color: #181E22;
-    border-radius: 8px;
-    height: 48px;
-    left: 4px;
-    position: absolute;
-    top: 8px;
-    width: 186px;
 }
 
 .artikel {
