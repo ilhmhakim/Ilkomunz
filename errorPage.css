@@ -1,0 +1,50 @@
+*, 
+html{
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+}
+
+@media only screen and (max-width: 1440px)
+ {
+   section {
+     align-items: center !important;
+   }
+ h1 {
+     padding-top: 0 !important;
+   }
+ }
+
+ .contenterror{
+  justify-content: center;
+ }
+
+ .numberError{
+  justify-content: center;
+ }
+
+ .tekserror1{
+  width: 715px;
+  height: 92px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #36597D;
+  text-shadow: 8px 8px 16px #C9D9E8, -8px -8px 16px #FFFFFF;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-top: 100px;
+  margin-left: 480px;
+ }
+
+ 
