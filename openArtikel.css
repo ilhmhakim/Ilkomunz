@@ -222,6 +222,10 @@ html{
 }
 
 .artikel {
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1px;
@@ -231,10 +235,7 @@ html{
 }
 
 .beranda {
-    color: #FFFFFF;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    color: #121926;
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1px;
@@ -311,457 +312,187 @@ html{
     width: fit-content;
 }
 
-/* Tempat Postingan */
-.post-card {
-    align-items: flex-start;
+/* Trending Section */
+.trending-section {
+    width: 669px;
+    border: 1px solid;
+    border-color: #121926;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 120px;
     margin-left: 269px;
-    display: flex;
-    height: 227px;
-    margin-right: 214px;
-    margin-top: 128px;
-    min-width: 626px;
-    z-index: 1;
-}
-
-.overlap-group2 {
-    align-items: flex-start;
-    background-color: #FFFFFF;
-    border: 1px solid;
-    border-color: #E3E8EF;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-height: 227px;
-    padding: 21px 20px;
-    width: 624px;
-}
-
-.group-container {
-    align-items: flex-start;
-    display: flex;
-    gap: 24px;
-    margin-top: 4px;
-    min-width: 572px;
-}
-
-.overlap-group-1-5 {
-    align-items: flex-start;
-    display: flex;
-}
-
-.overlap-group-1-2 {
-    border: 1px solid;
-    border-color: #E3E8EF;
     border-radius: 8px;
-    height: 125px;
-    min-width: 508px;
-    padding: 13px 17px;
-}
-
-.tulisCeritamuDiSini {
-    color: #121926;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 20px;
-    opacity: 0.5;
-    white-space: nowrap;
-}
-
-.mask-group-1 {
-    height: 40px;
-    width: 40px;
-}
-
-.pilihanPost {
-    align-items: center;
-    align-self: flex-end;
-    display: flex;
-    gap: 60px;
-    margin-right: 40px;
-    padding: 8px 0px;
-    position: relative;
-    width: 504px;
-}
-
-.opsi-1 {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    position: relative;
-    width: fit-content;
-}
-
-.imageIcon {
-    height: 32px;
-    min-width: 32px;
-    position: relative;
-}
-
-.image {
-    color: #181E22;
-    font-weight: 400;
-    line-height: 20px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.video {
-    color: #181E22;
-    font-weight: 400;
-    line-height: 20px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.article {
-    color: #181E22;
-    font-weight: 400;
-    line-height: 20px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.agenda {
-    color: #181E22;
-    font-weight: 400;
-    line-height: 20px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.opsi-2 {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    position: relative;
-    width: fit-content;
-}
-
-.videoIcon {
-    height: 32px;
-    min-width: 32px;
-    position: relative;
-}
-
-.opsi-3 {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    position: relative;
-    width: fit-content;
-}
-
-.articleIcon {
-    height: 32px;
-    min-width: 32px;
-    position: relative;
-}
-
-.opsi-4 {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    position: relative;
-    width: fit-content;
-}
-
-.agendaIcon {
-    height: 32px;
-    min-width: 32px;
-    position: relative;
-}
-
-/* Card Postingan */
-.card-postingan {
-    align-items: flex-start;
-    background-color: #FFFFFF;
-    border: 1px solid;
     border-color: #E3E8EF;
-    border-radius: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFFFFF;
+}
+
+.trending-img {
+    width: 545px;
+}
+
+.trending-in-article {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+}
+
+.trending-in-article p {
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.trending-desc-2 {
+    display: flex;
+}
+
+.trending-number {
+    font-size: 40px;
+    color: #697586;
+    opacity: 50%;
+}
+
+.trending-desc-3 {
+    padding-left: 16px;
+}
+
+.creator-profile-in-trend {
+    display: flex;
+    position: relative;
+}
+
+.creator-trend-name {
+    padding-left: 4px;
+    font-weight: 600;
+}
+
+.trending-title {
+    padding-top: 4px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 497px;
+}
+
+.chevron-left {
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 30px;
+    height: 54px;
+    background-color: #FCFFD9;
+    margin-top: 120px;
+}
+
+.chevron-right {
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 30px;
+    height: 54px;
+    background-color: #FCFFD9;
+    margin-top: 120px;
+}
+
+/* Trending Topics */
+.trending-topics {
+    position: relative;
     margin-left: 269px;
-    margin-right: 216px;
-    margin-top: 80px;
-    overflow: hidden;
-    padding: 24px 0px;
-    position: relative;
-    width: 664px;
-    z-index: 2;
+    width: 669px;
 }
 
-.component-post {
-    align-items: center;
+.topik {
+    margin-right: 8px;
+    border-radius: 4px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FFFFFF;
+    border-color: #E3E8EF;
+    border-style: double;
+}
+
+.pilihan-topik {
+    width: 669px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: relative;
-    width: fit-content;
+    justify-content: space-between;
 }
 
-.img {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    position: relative;
-    width: fit-content;
-}
-
-.more-square {
-    height: 24px;
-    min-width: 24px;
-    position: relative;
-    margin-left: 420px;
-}
-
-.ellipse-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    left: 10px;
-    min-height: 20px;
-    position: relative;
-    top: 2px;
-    width: 4px;
-}
-
-.ellipse {
-    background-color: #666666;
-    border-radius: 2px;
-    height: 4px;
-    width: 4px;
-}
-
-.top-caption {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    padding: 0px 4px;
-    position: relative;
-    width: fit-content;
-    margin-left: -715px;
-}
-
-.top-card {
-    align-items: center;
-    display: flex;
-    gap: 432px;
-    position: relative;
-    width: fit-content;
-}
-
-.profile {
-    align-items: flex-start;
-    display: flex;
-    gap: 24px;
-    position: relative;
-    width: fit-content;
-    margin-left: 24px;
-}
-
-.nama-status {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: fit-content;
-}
-
-.name {
-    color: #181E22;
-    font-weight: 700;
-    line-height: 24px;
-    margin-left: -20px;
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.mahasiswa {
-    color: #212121;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 16px;
-    margin-top: -4px;
-}
-
-.mahasiswa-2 {
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.profile-1 {
-    background-image: url(Assets/James.svg);
-    background-size: 100% 100%;
-    height: 40px;
-    min-width: 40px;
-    position: relative;
-}
-
-.caption {
-    color: #181E22;
-    font-weight: 300;
-    line-height: 20px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-    margin-left: 20px;
-}
-
-.img_0180 {
-    height: 334px;
-    min-width: 624px;
-    position: relative;
-    width: fit-content;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: -20px;
-}
-
-.icons {
-    height: 30px;
-    min-width: 576px;
-    position: relative;
-    margin-left: -50px;
-    margin-top: -20px;
-}
-
-.flex-row {
-    align-items: flex-end;
-    display: flex;
-    min-width: 576px;
-}
-
-.overlap-group-2-1 {
-    height: 30px;
-    position: relative;
-    width: 100px;
-    margin-right: 1300px;
-}
-
-.heart-2 {
-    height: 24px;
-    width: 24px;
-}
-
-.heart {
-    left: 0;
-    position: absolute;
-    top: 6px;
-    margin-left: 70px;
-}
-
-.heart:hover {
-    transform: scale(1.2);
-}
-
-.heart:active {
-    transform: scale(1);
-    background-image: url(Assets/Heart_clicked.svg);
-}
-
-.overlap-group1-5 {
-    align-items: flex-start;
-    display: flex;
-}
-
-.overlap-group1-3 {
-    background-color: #819CFF;
-    border: 2px solid;
+.topik:hover {
+    transform: skew(2deg);
     border-color: #FFFFFF;
-    border-radius: 24px;
-    height: 16px;
-    padding: 2px 4px;
-    position: absolute;
-    top: -2px;
-    margin-left: 128px;
 }
 
-.number-2 {
-    font-size: 14px;
-    letter-spacing: 0;
-    line-height: normal;
-    min-height: 12px;
-    white-space: nowrap;
+
+.news {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-color: #E3E8EF;
+    margin-top: 40px;
+    margin-left: 269px;
+    width: 669px;
 }
 
-.number {
-    text-align: center;
-    width: 8px;
+.isi-konten-news {
+    display: flex;
 }
 
-.bookmark {
-    height: 24px;
-    margin-top: 4px;
-    margin-left: 640px;
-    position: absolute;
-    width: 24px;
+.news-cc {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    position: relative;
 }
 
-.bookmark:hover {
-    transform: scale(1.2);
+.content-news {
+    width: 440px;
 }
 
-.bookmark:active {
-    transform: scale(1);
-    background-image: url(Assets/Bookmark_clicked.svg);
+.profil-news {
+    display: flex;
+    position: relative;
 }
 
-.send {
-    height: 24px;
-    margin-left: 160px;
-    width: 24px;
-    margin-top: 6px;
+.creator-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 8px;
 }
 
-.send:hover {
-    transform: scale(1.2);
+.judul-news {
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
-.send:active {
-    transform: scale(1);
-    background-image: url(Assets/Send_clicked.svg);
+.desc-news {
+    margin-top: 0px;
 }
 
-.text {
-    letter-spacing: 0;
-    line-height: normal;
-    min-height: 12px;
-    text-align: center;
-    white-space: nowrap;
-    width: 21px;
+.tanggal-news {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.chat {
-    height: 24px;
-    left: 48px;
-    position: absolute;
-    top: 6px;
-    width: 24px;
-    margin-left: 68px;
+.tanggal-waktu-baca {
+    display: flex;
+    position: relative;
 }
 
-.chat:hover {
-    transform: scale(1.2);
+.waktu-baca-news {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 16px;
 }
 
-.chat:active {
-    transform: scale(1);
-    background-image: url(Assets/Chat_clicked.svg);
+.gambar-news img {
+    padding-left: 32px;
+}
+
+.divider-news {
+    margin-top: -40px;
+    margin-left: 32px;
 }
 
 /* Section Frame Kanan */

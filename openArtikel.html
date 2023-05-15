@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="homepage.css">
+    <title>Open Artikel</title>
+    <link rel="stylesheet" href="openArtikel.css">
 </head>
+
 <body>
-    <section class="topBar">
-        <input class="searchBar contentSB cariKomunitas" type="text" placeholder="Cari Komunitas">
-            <img class="searchIcon" src="Assets/light.svg" alt="searchIcon">
-        <button class="notification" onclick="action.href='#'" type="button">
-            <div class="iconNotif"></div>
-        </button>
-    </section>
 
     <section class="navbar-ver-1">
         <div class="overlap-group3">
@@ -24,15 +19,12 @@
                         <img class="logo-with-text" src="Assets/Logo with Text.svg" alt="logo-with-text">
                     </div>
                 </div>
-                <div class="change-lay-out">
-                    <img class="chevron-left" src="Assets/chevroLeft_ico.svg" alt="">
-                </div>
             </div>
             <div class="navbar-comp">
                 <div class="bg"></div>
-                <button class="x-active" onclick="location.href='homepage.html'" type="button">
+                <button class="x-unactive" onclick="location.href='homepage.html'" type="button">
                     <div class="content">
-                        <img class="ui" src="Assets/beranda_ico.svg" alt="beranda-ico">
+                        <img class="ui" src="Assets/beranda_unactive.svg" alt="beranda-ico">
                         <div class="beranda">Beranda</div>
                     </div>
                 </button>
@@ -48,9 +40,9 @@
                         <div class="presensi">Presensi</div>
                     </div>
                 </button>
-                <button class="x-unactive" onclick="location.href='openArtikel.html'" type="button">
+                <button class="x-active" onclick="location.href='#'" type="button">
                     <div class="content">
-                        <img class="ui" src="Assets/article_ico.svg" alt="article_ico">
+                        <img class="ui" src="Assets/article-active.svg" alt="article_ico">
                         <div class="artikel">Artikel</div>
                     </div>
                 </button>
@@ -69,70 +61,84 @@
         </div>
     </section>
 
-    <section class="post-card">
-        <div class="overlap-group2">
-            <div class="group-container">
-                <img class="mask-group-1" src="Assets/fotoprof.png" alt="fotoprof">
-                <input class="overlap-group-1-2 overlap-group-1-5 tulisCeritamuDiSini" type="text" placeholder="Tulis ceritamu di sini...">
+    <section class="topBar">
+        <input class="searchBar contentSB cariKomunitas" type="text" placeholder="Cari Artikel">
+        <img class="searchIcon" src="Assets/light.svg" alt="searchIcon">
+        <button class="notification" onclick="action.href='#'" type="button">
+            <div class="iconNotif"></div>
+        </button>
+    </section>
+
+    <section class="trending-section">
+        <button class="chevron-left" onclick="action.href='#'" type="button">
+            <img class="chevron-left-ico" src="Assets/chevron-left-ico.svg" alt="chevron-left-ico">
+        </button>
+        <div class="in-content">
+            <div class="trending-img">
+                <img src="Assets/trending-photos.svg" alt="">
             </div>
-            <div class="pilihanPost">
-                <div class="opsi-1">
-                    <img class="imageIcon" src="Assets/Image.svg" alt="image">
-                    <div class="image">Foto</div>
+            <div class="trending-desc">
+                <div class="trending-in-article">
+                    <img class="graph-ico" src="Assets/graph-ico.svg" alt="graph-ico">
+                    <p>Trending di Artikel</p>
                 </div>
-                <div class="opsi-2">
-                    <img class="videoIcon" src="Assets/Video.svg" alt="image">
-                    <div class="video">Video</div>
-                </div>
-                <div class="opsi-3">
-                    <img class="articleIcon" src="Assets/Article.svg" alt="Article">
-                    <div class="article">Article</div>
-                </div>
-                <div class="opsi-4">
-                    <img class="agendaIcon" src="Assets/Agenda.svg" alt="agenda">
-                    <div class="agenda">Agenda</div>
+                <div class="trending-desc-2">
+                    <div class="trending-number">01</div>
+                    <div class="trending-desc-3">
+                        <div class="creator-profile-in-trend">
+                            <div class="pic-trend-profile">
+                                <img src="Assets/the-pyCoach-profile-picture.svg" alt="the-pyCoach-profile-picture">
+                            </div>
+                            <div class="creator-trend-name">The PyCoach</div>
+                        </div>
+                        <div class="trending-title">
+                            You’re Using ChatGPT Wrong! Here’s How to Be Ahead of 99% of Chat GPT Users
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <button class="chevron-right" onclick="action.href='#'" type="button">
+            <img class="chevron-right-ico" src="Assets/chevron-right-ico.svg" alt="chevron-right-ico">
+        </button>
     </section>
 
-    <section class="card-postingan">
-        <div class="component-post">
-            <div class="img">
-                <div class="top-caption">
-                    <div class="top-card">
-                        <div class="profile">
-                            <div class="profile-1"></div>
-                            <div class="nama-status">
-                                <div class="name">James</div>
-                                <div class="mahasiswa mahasiswa-2">Mahasiswa</div>
-                            </div>
-                            <div class="more-square">
-                                <div class="ellipse-container">
-                                    <div class="ellipse"></div>
-                                    <div class="ellipse"></div>
-                                    <div class="ellipse"></div>
-                                </div>
-                            </div>
+    <section class="trending-topics">
+        <h2 class="discover">Discover more of what matters to you</h2>
+        <div class="pilihan-topik">
+            <button class="topik" onclick="action.href='#'">Programming</button>
+            <button class="topik" onclick="action.href='#'">Data Science</button>
+            <button class="topik" onclick="action.href='#'">Technonogy</button>
+            <button class="topik" onclick="action.href='#'">Writing</button>
+            <button class="topik" onclick="action.href='#'">Politics</button>
+            <button class="topik" onclick="action.href='#'">Machine Learning</button>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="isi-konten-news">
+            <div class="news-cc">
+                <div class="content-news">
+                    <div class="profil-news">
+                        <div class="profil-img-news">
+                            <img src="Assets/news1-creator.svg" alt="news1-creator">
                         </div>
+                        <p class="creator-name">Felicia Wu</p>
                     </div>
-                    <p class="caption">AgriUX hari ini seru banget, tapi aku ga diajak, jadi aku edit aja deh</p>
-                    <img class="img_0180" src="Assets/IMG_0180.svg" alt="img_0180">
+                    <h3 class="judul-news">My first layoff was the best thing that could happen to my career</h3>
+                    <p class="desc-news">I expect the recent layoff to be no different. Here’s the approach I’m taking for the best that’s yet to come.</p>
+                    <div class="tanggal-waktu-baca">
+                        <p class="tanggal-news">Apr 26</p>
+                        <p class="waktu-baca-news">7 min read</p>
+                    </div>
                 </div>
-                <div class="icons">
-                    <div class="flex-row">
-                        <div class="overlap-group-2-1">
-                            <img class="heart heart-2" src="Assets/Heart.svg" alt="Heart">
-                            <img class="chat" src="Assets/Chat.svg" alt="chat">
-                            <img class="bookmark" src="Assets/Bookmark.svg" alt="bookmark">
-                            <div class="overlap-group1-3 overlap-group1-5">
-                                <div class="number number-2">8</div>
-                            </div>
-                            <img class="send" src="Assets/Send.svg" alt="send">
-                        </div>
-                    </div>
+                <div class="gambar-news">
+                    <img src="Assets/news1.svg" alt="news1">
                 </div>
             </div>
+        </div>
+        <div class="divider-news">
+            <img src="Assets/divider-artikel.svg" alt="divider-artikel">
         </div>
     </section>
 
@@ -157,10 +163,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="followedKomun">
                 <div class="overlap-grup-1">
-                    <div class="komunitasYangDiikuti">Komunitas yang diikuti</div>
+                    <div class="komunitasYangDiikuti"></div>
                     <img class="line-6" src="Assets/Line-6.svg" alt="Line 6">
                     <div class="folcmnt">
                         <div class="komun-1">
@@ -212,4 +218,5 @@
         </div>
     </section>
 </body>
+
 </html>
