@@ -260,6 +260,39 @@ html {
     margin-left: 60px;
 }
 
+.back-button {
+    position: absolute;
+    display: flex;
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    left: 0;
+    top: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.back-button p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #626262;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+
+    &:hover {
+        color: #181E22;
+    }
+}
+
+.back-button img {
+    background-image: url(Assets/back-icon.svg);
+}
+
 .nama-my-profile {
     margin-bottom: 0;
     margin-top: 16px;
@@ -722,7 +755,7 @@ html {
     color: 212121;
 }
 
-.foto-di-post img{
+.foto-di-post img {
     max-width: 100%;
     width: 580px;
     height: auto;
