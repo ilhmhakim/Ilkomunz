@@ -1123,6 +1123,14 @@ html{
     z-index: 1;
 }
 
+.presensiButton2:active {
+    transform: scale(1.2);
+}
+
+.presensiTeks:active {
+    background-image: url(Assets/check-fill-active.svg);
+}
+
 .presensiButton2:active{
     transform:skewX;
 }
