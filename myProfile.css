@@ -493,15 +493,6 @@ html {
     width: fit-content;
 }
 
-.video {
-    color: #181E22;
-    font-weight: 400;
-    line-height: 20px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-}
-
 .article {
     color: #181E22;
     font-weight: 400;
@@ -549,12 +540,6 @@ html {
     width: fit-content;
 }
 
-.videoIcon {
-    height: 32px;
-    min-width: 32px;
-    position: relative;
-}
-
 .opsi-3 {
     align-items: center;
     display: flex;
@@ -575,12 +560,6 @@ html {
     gap: 8px;
     position: relative;
     width: fit-content;
-}
-
-.agendaIcon {
-    height: 32px;
-    min-width: 32px;
-    position: relative;
 }
 
 /* Mungkin Anda Kenal */
