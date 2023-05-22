@@ -789,6 +789,115 @@ html {
     }
 }
 
+.komen-di-postingan {
+    display: none;
+    margin-top: -500px;
+    margin-left: 100px;
+    background-color: #FFFFFF;
+    border: 1px solid #E3E8EF;
+    border-radius: 8px;
+    padding: 24px 32px;
+    width: 376px;
+}
+
+.komen-di-postingan.show-popup4 {
+    display: block;
+}
+
+.top-bar-komentar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.top-bar-komentar h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #181E22;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    letter-spacing: 0.1px;
+}
+
+.komen-orang {
+    margin-top: 8px;
+}
+
+.profil-orang-komen {
+    display: flex;
+    position: relative;
+}
+
+.waktu-orang-komen {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.waktu-komen {
+    padding-left: 230px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #C0C0C0;
+}
+
+.waktu-orang-komen p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nama-status-orang-komen {
+    padding-left: 4px;
+}
+
+.nama-status-orang-komen p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #C0C0C0;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nama-status-orang-komen h5 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.top-bar-komentar img {
+    width: 24px;
+    height: 24px;
+}
+
+.komennya-orang {
+    width: 380px;
+    height: 36px;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.komennya-orang p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+}
+
 .bookmark-postingan {
     &:hover {
         scale: 1.1;

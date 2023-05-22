@@ -198,7 +198,41 @@
             <div class="like-comment">
                 <img class="like-postingan" src="Assets/Heart.svg" alt="Heart">
                 <img class="komen-postingan" src="Assets/Chat.svg" alt="Komen">
+                <div class="komen-di-postingan">
+                    <div class="top-bar-komentar">
+                        <h4>Komentar</h4>
+                        <img src="Assets/close-fill.svg" alt="close-fill">
+                    </div>
+                    <div class="komen-orang">
+                        <div class="profil-orang-komen">
+                            <img src="Assets/profil-orang-komen.svg" alt="profil-orang-komen">
+                            <div class="waktu-orang-komen">
+                                <div class="nama-status-orang-komen">
+                                    <h5>Asyir G</h5>
+                                    <p>Mahasiswa</p>
+                                </div>
+                                <p class="waktu-komen">12 min</p>
+                            </div>
+                        </div>
+                        <div class="komennya-orang">
+                            <p>Keren banget Yoga</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <script>
+                const komenButton = document.querySelector('.komen-postingan');
+                const closeButtonKomen = document.querySelector('.top-bar-komentar img');
+                const popUpKomentar = document.querySelector('.komen-di-postingan');
+
+                komenButton.addEventListener('click', () => {
+                    popUpKomentar.classList.add('show-popup4');
+                });
+
+                closeButtonKomen.addEventListener('click', () => {
+                    popUpKomentar.classList.remove('show-popup4');
+                });
+            </script>
             <div class="bookmark-postingan">
                 <img class="bookmark-postingan" src="Assets/Bookmark.svg" alt="Bookmark">
             </div>
