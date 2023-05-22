@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="homepage.css">
 </head>
+
 <body>
     <section class="topBar">
         <input class="searchBar contentSB cariKomunitas" type="text" placeholder="Cari Komunitas">
-            <img class="searchIcon" src="Assets/light.svg" alt="searchIcon">
+        <img class="searchIcon" src="Assets/light.svg" alt="searchIcon">
         <button class="notification" onclick="action.href='#'" type="button">
             <div class="iconNotif"></div>
         </button>
@@ -73,21 +75,86 @@
         <div class="overlap-group2">
             <div class="group-container">
                 <img class="mask-group-1" src="Assets/fotoprof.png" alt="fotoprof">
-                <input class="overlap-group-1-2 overlap-group-1-5 tulisCeritamuDiSini" type="text" placeholder="Tulis ceritamu di sini...">
+                <input class="overlap-group-1-2 overlap-group-1-5 tulisCeritamuDiSini" type="text"
+                    placeholder="Tulis ceritamu di sini...">
             </div>
             <div class="pilihanPost">
-                <div class="opsi-1">
+                <button class="opsi-1">
                     <img class="imageIcon" src="Assets/Image.svg" alt="image">
                     <div class="image">Foto</div>
-                </div>
-                <div class="opsi-3">
+                </button>
+                <button class="opsi-3">
                     <img class="articleIcon" src="Assets/Article.svg" alt="Article">
                     <div class="article">Article</div>
-                </div>
+                </button>
                 <div class="opsi-4">
                     <button class="submitButton">Submit</button>
                 </div>
             </div>
+            <div class="pop-up-foto">
+                <div class="top-bar-pop-up-foto">
+                    <div class="judul-pop-up">Pilih gambar untuk dibagikan</div>
+                    <img src="Assets/close-fill.svg" alt="close">
+                </div>
+                <input type="image" placeholder="Masukkan Gambar">
+                <div class="button-pop-up">
+                    <button class="batalkan-pop-up-foto">Batalkan</button>
+                    <button class="selesai-pop-up-foto">Selesai</button>
+                </div>
+            </div>
+            <script>
+                const opsi1Button = document.querySelector('.opsi-1');
+                const closeButton = document.querySelector('.top-bar-pop-up-foto img');
+                const batalkanButton = document.querySelector('.batalkan-pop-up-foto');
+                const popUpFoto = document.querySelector('.pop-up-foto');
+
+                opsi1Button.addEventListener('click', () => {
+                    popUpFoto.classList.add('show-popup');
+                });
+
+                closeButton.addEventListener('click', () => {
+                    popUpFoto.classList.remove('show-popup');
+                });
+
+                batalkanButton.addEventListener('click', () => {
+                    popUpFoto.classList.remove('show-popup');
+                });
+            </script>
+
+            <div class="pop-up-artikel">
+                <div class="top-bar-pop-up-artikel">
+                    <div class="judul-pop-up">Tulis artikel yang diinginkan</div>
+                    <img src="Assets/close-fill.svg" alt="close">
+                </div>
+                <h4>Tuliskan judul</h4>
+                <input class="tuliskan-judul-artikel" type="text" placeholder="Tuliskan judul artikel">
+                <h4>Masukkan gambar</h4>
+                <input class="image-input-pop-up" type="image" placeholder="Masukkan Gambar">
+                <h4>Tulis Artikel</h4>
+                <input class="text-input-pop-up" type="text" placeholder="Tuliskan artikelmu di sini">
+                <div class="button-pop-up">
+                    <button class="batalkan-pop-up-artikel">Batalkan</button>
+                    <button class="selesai-pop-up-artikel">Selesai</button>
+                </div>
+            </div>
+            <script>
+                const opsi3Button = document.querySelector('.opsi-3');
+                const closeButton2 = document.querySelector('.top-bar-pop-up-artikel img');
+                const batalkanButton2 = document.querySelector('.batalkan-pop-up-artikel');
+                const popUpArtikel = document.querySelector('.pop-up-artikel');
+
+                opsi3Button.addEventListener('click', () => {
+                    popUpArtikel.classList.add('show-popup2');
+                });
+
+                closeButton2.addEventListener('click', () => {
+                    popUpArtikel.classList.remove('show-popup2');
+                });
+
+                batalkanButton2.addEventListener('click', () => {
+                    popUpArtikel.classList.remove('show-popup2');
+                });
+            </script>
         </div>
     </section>
 
@@ -100,8 +167,24 @@
                     <p>Mahasiswa</p>
                 </div>
             </div>
-            <div class="titik-tiga-di-post">
+            <a href="#pop-up-more-square" class="titik-tiga-di-post">
                 <img src="Assets/More Square.svg" alt="More Square">
+            </a>
+            <div class="content-pop-up">
+                <div id="pop-up-more-square">
+                    <button class="salin-link">
+                        <img src="Assets/salin-link-ico.svg" alt="salin-link">
+                        <p>Salin link</p>
+                    </button>
+                    <button class="hide-post">
+                        <img src="Assets/hide-post-svg.svg" alt="hide-post">
+                        <p>Sembunyikan postingan</p>
+                    </button>
+                    <button class="report-post">
+                        <img src="Assets/report-post-ico.svg" alt="report-post">
+                        <p>Laporkan postingan</p>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="caption-di-post">
@@ -143,7 +226,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="followedKomun">
                 <div class="overlap-grup-1">
                     <div class="komunitasYangDiikuti">Komunitas yang diikuti</div>
@@ -198,4 +281,5 @@
         </div>
     </section>
 </body>
+
 </html>
