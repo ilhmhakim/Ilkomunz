@@ -213,6 +213,50 @@
                     <button class="go-to-settings" onclick="action.href='#'" type="button">
                         <img class="iconGear" src="Assets/Icon nonActive.svg" alt="iconGear">
                     </button>
+                    <div class="profil-settings">
+                        <div class="top-bar-profil-settings">
+                            <h4 class="judul-profil-settings">Pengaturan Profil</h4>
+                            <img src="Assets/close-fill.svg" alt="close-fill">
+                        </div>
+                        <div class="change-profile-picture">
+                            <img src="Assets/change-profile-picture.svg" alt="change-profile-picture">
+                            <button class="button-ganti-pp" onclick="location.href='#'">
+                                <img src="Assets/pencil-line.svg" alt="pencil-line">
+                                <p>Ganti profile picture</p>
+                            </button>
+                        </div>
+                        <div class="detail-info-user">
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Nama</div>
+                                <input type="text" placeholder="Andhika Ramadhani">
+                            </div>
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Bio</div>
+                                <input type="text" placeholder="Kemarin aku makan pecel lele chuakss">
+                            </div>
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Email</div>
+                                <input type="text" placeholder="andhikarama@apps.ipb.ac.id">
+                            </div>
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Tanggal Lahir</div>
+                                <input type="text" placeholder="19 Maret 2023">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        const userSettingButton = document.querySelector('.go-to-settings');
+                        const closeButtonUserSetting = document.querySelector('.top-bar-profil-settings img');
+                        const popUpUserSetting = document.querySelector('.profil-settings');
+
+                        userSettingButton.addEventListener('click', () => {
+                            popUpUserSetting.classList.add('show-popup3');
+                        });
+
+                        closeButtonUserSetting.addEventListener('click', () => {
+                            popUpUserSetting.classList.remove('show-popup3');
+                        });
+                    </script>
                 </div>
                 <div class="profileCard">
                     <div class="overlap-group">

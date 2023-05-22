@@ -414,7 +414,7 @@ html {
     width: 540px;
 }
 
-.pop-up-foto input{
+.pop-up-foto input {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -458,7 +458,8 @@ html {
     margin-left: 360px;
 }
 
-.pop-up-foto button, .pop-up-artikel button {
+.pop-up-foto button,
+.pop-up-artikel button {
     right: 0;
     display: flex;
     flex-direction: row;
@@ -476,7 +477,8 @@ html {
     font-weight: 500;
 }
 
-.batalkan-pop-up-foto, .batalkan-pop-up-artikel {
+.batalkan-pop-up-foto,
+.batalkan-pop-up-artikel {
     color: #FF708A;
 }
 
@@ -490,11 +492,13 @@ html {
     white-space: nowrap;
 }
 
-.selesai-pop-up-foto, .selesai-pop-up-artikel {
+.selesai-pop-up-foto,
+.selesai-pop-up-artikel {
     color: #819CFF;
 }
 
-.top-bar-pop-up-foto, .top-bar-pop-up-artikel {
+.top-bar-pop-up-foto,
+.top-bar-pop-up-artikel {
     display: flex;
     justify-content: space-between;
 }
@@ -793,6 +797,99 @@ html {
     &:active {
         background-image: url(Assets/Bookmark_clicked.svg);
     }
+}
+
+/* Pop Up user setting */
+.profil-settings {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: #E3E8EF;
+    padding: 24px 32px;
+    margin-left: -500px;
+    margin-top: 700px;
+    width: 327px;
+    justify-content: center;
+}
+
+.profil-settings.show-popup3 {
+    display: block;
+}
+
+.top-bar-profil-settings {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.change-profile-picture {
+    margin-left: 100px;
+}
+
+.button-ganti-pp {
+    margin-left: -20px;
+    display: flex;
+    border-color: #697586;
+    border-style: double;
+    border-radius: 8px;
+    padding: 8px 8px;
+    background-color: #FFFFFF;
+
+    &:hover {
+        border-color: #819CFF;
+    }
+}
+
+.button-ganti-pp p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.button-ganti-pp p {
+    margin-top: 3px;
+    padding-left: 4px;
+    margin-bottom: 0;
+}
+
+.top-bar-profil-settings h4 {
+    margin-top: 0px;
+    margin-bottom: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #181E22;
+}
+
+.bagian-in-user-settings {
+    width: 263px;
+    height: 64px;
+    padding: 8px;
+}
+
+.judul-section {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #181E22;
+}
+
+.bagian-in-user-settings input {
+    width: 263px;
+    border-radius: 8px;
+    border: 1px solid;
+    border-style: double;
+    border-color: #E3E8EF;
+    background-color: #FFFFFF;
+    padding: 10px 24px;
 }
 
 /* Section Frame Kanan */
