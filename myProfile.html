@@ -72,10 +72,56 @@
                 <h3 class="nama-my-profile">Andhika Ramadhani</h3>
                 <p class="status-mahasiswa">Mahasiswa</p>
             </div>
-            <button class="edit-profile">
+            <button class="edit-profile" onclick="showProfileSettings()">
                 <img src="Assets/pencil-line.svg" alt="pencil-line">
                 <p>Edit Profil</p>
             </button>
+            <div class="profil-settings" id="profileSettings">
+                <div class="top-bar-profil-settings">
+                    <h4 class="judul-profil-settings">Edit Profil</h4>
+                    <img src="Assets/close-fill.svg" alt="close-fill" onclick="hideProfileSettings()">
+                </div>
+                <div class="change-profile-picture">
+                    <img src="Assets/change-profile-picture.svg" alt="change-profile-picture">
+                    <button class="button-ganti-pp" onclick="location.href='#'">
+                        <img src="Assets/pencil-line.svg" alt="pencil-line">
+                        <p>Ganti profile picture</p>
+                    </button>
+                </div>
+                <div class="detail-info-user">
+                    <div class="bagian-in-user-settings">
+                        <div class="judul-section">Nama</div>
+                        <input type="text" placeholder="Andhika Ramadhani">
+                    </div>
+                    <div class="bagian-in-user-settings">
+                        <div class="judul-section">Status</div>
+                        <input type="text" placeholder="Mahasiswa">
+                    </div>
+                    <div class="bagian-in-user-settings">
+                        <div class="judul-section">Bio</div>
+                        <input type="text" placeholder="Kemarin aku makan pecel lele chuakss">
+                    </div>
+                    <div class="bagian-in-user-settings">
+                        <div class="judul-section">Email</div>
+                        <input type="text" placeholder="andhikarama@apps.ipb.ac.id">
+                    </div>
+                    <div class="bagian-in-user-settings">
+                        <div class="judul-section">Tanggal Lahir</div>
+                        <input type="text" placeholder="19 Maret 2023">
+                    </div>
+                </div>
+            </div>
+            <script>
+                function showProfileSettings() {
+                    const popUpUserSetting = document.getElementById('profileSettings');
+                    popUpUserSetting.classList.add('show-popup3');
+                }
+
+                function hideProfileSettings() {
+                    const popUpUserSetting = document.getElementById('profileSettings');
+                    popUpUserSetting.classList.remove('show-popup3');
+                }
+            </script>
             <button class="edit-bg">
                 <img src="Assets/pencil-line.svg" alt="pencil-line">
                 <p>Edit</p>
@@ -83,6 +129,7 @@
             <div class="rect-bg"></div>
         </div>
     </section>
+
 
     <section class="coba-dah">
         <section class="tentang">
@@ -283,11 +330,11 @@
                     const komenButton = document.querySelector('.komen-postingan');
                     const closeButtonKomen = document.querySelector('.top-bar-komentar img');
                     const popUpKomentar = document.querySelector('.komen-di-postingan');
-    
+
                     komenButton.addEventListener('click', () => {
                         popUpKomentar.classList.add('show-popup4');
                     });
-    
+
                     closeButtonKomen.addEventListener('click', () => {
                         popUpKomentar.classList.remove('show-popup4');
                     });
