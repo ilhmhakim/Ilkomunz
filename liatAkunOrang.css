@@ -342,6 +342,10 @@ html {
         border-color: #181E22;
         border-style: double;
     }
+
+    &:focus {
+        background-color: #C0C0C0;
+    }
 }
 
 .edit-profile p {
@@ -479,6 +483,7 @@ html {
 }
 
 .tentang {
+    position: absolute;
     background-color: #FFFFFF;
     border-radius: 8px;
     color: #E3E8EF;
@@ -991,7 +996,10 @@ html {
     width: 56px;
     height: 56px;
     margin-top: 8px;
-    max-width: 100%;
+    max-width: 56px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 /* Card Postingan */
@@ -1031,7 +1039,8 @@ html {
 
 #pop-up-more-square {
     position: absolute;
-    margin-left: -180px;
+    width: 200px;
+    margin-left: -220px;
     background-color: #FFFFFF;
     border-radius: 8px;
     border: 1px solid;
@@ -1075,6 +1084,7 @@ html {
 
 .nama-status-di-postingan {
     margin-left: 16px;
+    width: 150px;
 }
 
 .nama-status-di-postingan h4 {
@@ -1265,7 +1275,6 @@ html {
 }
 
 .kita-orang-komen {
-    margin-top: 20px;
     width: 40px;
     height: 40px;
     max-width: 100%;
@@ -1276,8 +1285,22 @@ html {
     padding: 0px 16px;
     border-radius: 8px;
     border: 1px solid #E3E8EF;
-    width: 290px;
+    width: 250px;
     height: 50px;
+}
+
+.orang-punya-komen {
+    margin-top: 16px;
+    display: flex;
+}
+
+.submit-komen-button {
+    background-color: #E3E8EF;
+    border-color: #E3E8EF;
+    border-radius: 8px;
+    height: 48px;
+    width: 48px;
+    margin-left: 8px;
 }
 
 .bookmark-postingan {
