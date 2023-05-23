@@ -898,6 +898,22 @@ html {
     padding: 10px 10px;
 }
 
+.kita-orang-komen {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+}
+
+.komenan-kita-orang {
+    margin-left: 8px;
+    padding: 0px 16px;
+    border-radius: 8px;
+    border: 1px solid #E3E8EF;
+    width: 290px;
+    height: 50px;
+}
+
 .bookmark-postingan {
     &:hover {
         scale: 1.1;
