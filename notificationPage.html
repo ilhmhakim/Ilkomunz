@@ -5,34 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presensi</title>
-    <link rel="stylesheet" href="presensi.css">
+    <link rel="stylesheet" href="notificationPage.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> 
 </head>
 <body>
     <section class="topBar">
-        <h1 class="topPresensi">Presensi Komunitas</h1>
-        <div>
-            <a href="" class="agriUXbar">AgriUX</a>
-            <a href="" class="csiBar">CSI</a>
-            <a href="" class="agribotBar">Agribot</a>
-        </div>
-        <select name="pertemuan" id="pertemuanke" aria-placeholder="Pertemuan" class="dropdownPertemuan">
-            <option value="1" class="optiondropdown">Pertemuan 1</option>
-            <option value="2" class="optiondropdown">Pertemuan 2</option>
-            <option value="3" class="optiondropdown">Pertemuan 3</option>
-            <option value="4" class="optiondropdown">Pertemuan 4</option>
-            <option value="5" class="optiondropdown">Pertemuan 5</option>
-            <option value="6" class="optiondropdown">Pertemuan 6</option>
-            <option value="7" class="optiondropdown">Pertemuan 7</option>
-            <option value="8" class="optiondropdown">Pertemuan 8</option>
-            <option value="9" class="optiondropdown">Pertemuan 9</option>
-            <option value="10" class="optiondropdown">Pertemuan 10</option>
-            <option value="11" class="optiondropdown">Pertemuan 11</option>
-            <option value="12" class="optiondropdown">Pertemuan 12</option>
-            <option value="13" class="optiondropdown">Pertemuan 13</option>
-            <option value="14" class="optiondropdown">Pertemuan 14</option>
-        </select>
+        <input class="searchBar contentSB cariKomunitas" type="text" placeholder="Cari Komunitas">
+        <img class="searchIcon" src="Assets/light.svg" alt="searchIcon">
+        <button class="notification" onclick="action.href='#'" type="button">
+            <div class="iconNotif"></div>
+        </button>
     </section>
+
+    <h1 class="judulNotif">
+        Notifikasi
+    </h1>
 
     <section class="navbar-ver-1">
         <div class="overlap-group3">
@@ -87,25 +75,32 @@
         </div>
     </section>
 
-    <!-- <section class="post-card">
+    <section class="post-card">
         <div class="overlap-group2">
-            
-        </div>
-    </section> -->
-
-    <section class="tengahContent">
-        <div class="presensiButton1">
-            <div class="presensiButton2">
-                <h1 class="presensiTeks">Presensi</h1>
+                <section class="box-notif">
+                    <div class="displayNotif">
+                        <img src="Assets/Mask group.png" class="imgNotif" alt="">
+                        <h2 class="notifTeks">Nadira Nur Abanisa berkomentar pada postingan Anda</h2>
+                        <h2 class="hour-notif">4 jam yang lalu</h2>
+                    </div>
+                </section>
+                <section class="box-notif">
+                    <div class="displayNotif">
+                        <img src="Assets/Mask group (1).png" class="imgNotif" alt="">
+                        <h2 class="notifTeks">Kevin Nur Adisantos menyukai postingan Anda</h2>
+                        <h3 class="hour-notif">8 jam yang lalu</h3>
+                    </div>
+                </section>
+                <section class="box-notif">
+                    <div class="displayNotif">
+                        <img src="Assets/logo_AgriUX 1.png" class="imgNotif" alt="">
+                        <h2 class="notifTeks">AgriUX memposting: Can Chat GPT boost your UX Design Skills? This deck includes a number of prompts that UX designers can do...</h2>
+                        <h3 class="hour-notif">10 jam yang lalu</h3>
+                    </div>
+                </section>
+               
             </div>
-        </div>
-        <div>
-            <button class="buttonRiwayatPresensi">
-                <h1 class="tulisanButtonRiwayatPresensi">Riwayat Presensi</h1>
-            </button>
-        </div>
     </section>
-
 
     <section class="frameKanan">
         <div class="frameDalem">
