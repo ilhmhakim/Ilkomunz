@@ -1051,13 +1051,14 @@ html{
     width: 115px;
     height: 44px;
     left: 290px;
-    top: 119px;
+    top: 140px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
     color: #36597D;
+    text-decoration: none;
 
 }
 
@@ -1066,13 +1067,14 @@ html{
     width: 35px;
     height: 28px;
     left: 445px;
-    top: 145px;
+    top: 155px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 28px;
     color: #B4B4B4;
+    text-decoration: none;
     }
 
 .agribotBar{
@@ -1080,13 +1082,14 @@ html{
     width: 74px;
     height: 28px;
     left: 520px;
-    top: 145px;
+    top: 155px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 28px;
     color: #B4B4B4;
+    text-decoration: none;
 }
 
 .presensiButton1{
