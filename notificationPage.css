@@ -4,6 +4,34 @@ html{
 
 /* Top Bar (Search Bar & Notification) */
 
+.topBar {
+    align-items: flex-end;
+    background-color: #FCFCFD;
+    display: flex;
+    gap: 24px;
+    left: 249px;
+    min-width: 726px;
+    padding: 28px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+.searchBar {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-color: #E3E8EF;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 54px;
+    position: relative;
+    min-width: 532px;
+}
+
 .contentSB {
     align-items: center;
     display: flex;
@@ -12,7 +40,11 @@ html{
     width: fit-content;
 }
 
-
+.searchIcon {
+    position: absolute;
+    padding-bottom: 15px;
+    padding-left: 16px;
+}
 
 .cariKomunitas {
     color: #697586;
@@ -27,9 +59,10 @@ html{
     width: fit-content;
 }
 
+
 .notification{
     align-items: flex-start;
-    background-color: #FFFFFF;
+    background-color: #FAFEC9;
     border: 1px solid;
     border-color: #E3E8EF;
     border-radius: 8px;
@@ -310,7 +343,7 @@ html{
     display: flex;
     height: 227px;
     margin-right: 214px;
-    margin-top: 128px;
+    margin-top: 200px;
     min-width: 626px;
     z-index: 1;
 }
@@ -1071,284 +1104,94 @@ html{
     color: #181E22;
 }
 
-.agriUXbar{
-    position: absolute;
-    width: 115px;
-    height: 44px;
-    left: 290px;
-    top: 140px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    color: #36597D;
-    text-decoration: none;
-
-}
-
-.csiBar{  
-    position: absolute;
-    width: 35px;
-    height: 28px;
-    left: 445px;
-    top: 155px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-    color: #B4B4B4;
-    text-decoration: none;
-    }
-
-.agribotBar{
-    position: absolute;
-    width: 74px;
-    height: 28px;
-    left: 520px;
-    top: 155px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-    color: #B4B4B4;
-    text-decoration: none;
-}
-
-.presensiButton1{
-    position: absolute;
-    left: 370px;
-    top: 280px;
-    background: #F1F5F9;
-    box-shadow: -1.66935px -1.66935px 0px #FFFFFF, -3.33871px -3.33871px 3.33871px #B8CCE0, inset -1.66935px -1.66935px 0px #FFFFFF, inset -3.33871px -3.33871px 3.33871px #B8CCE0;
-    border-radius: 400.766px;
-    width: 500px;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-}
-
-.presensiButton2{
-    display: flex;
-    margin-left: 40.6px;
-    margin-top: 40.6px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 40.0645px;
-    gap: 13.35px;
-    width: 338.88px;
-    height: 333.87px;
-    background: #F1F5F9;
-    box-shadow: 13.3548px 13.3548px 26.7097px #C9D9E8, -13.3548px -13.3548px 26.7097px #FFFFFF;
-    border-radius: 273.774px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 1;
-    z-index: 1;
-}
-
-.presensiButton2:active {
-    transform: scale(1.2);
-}
-
-.presensiTeks:active {
-    background-image: url(Assets/check-fill-active.svg);
-}
-
-.presensiButton2:active{
-    transform:skewX;
-}
-
-.presensiTeks{
-    width: 258.75px;
-    height: 253.74px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60.0968px;
-    line-height: 73px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #36597D;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-.buttonRiwayatPresensi{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    gap: 8px;
-    position: absolute;
-    width: 172px;
-    height: 72px;
-    left: 528px;
-    top: 855px;
-    background: #F1F5F9;
-    box-shadow: 8px 8px 16px #C9D9E8, -8px -8px 16px #FFFFFF;
-    border-radius: 24px;
-    border: none;
-}
-
-.tulisanButtonRiwayatPresensi{
-    width: 124px;
-    height: 24px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #36597D;
-    flex: none;
-    order: 0;
-    flex-grow: 0; 
-}
-
-.persentaseHadir{
-    position: absolute;
-    width: 61px;
-    height: 40px;
-    left: 850px;
-    top: 125px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 28px;
-    color: #36597D;
-}
-
-.kehadiranPresensi{
-    position: absolute;
-    width: 73px;
-    height: 24px;
-    left: 843px;
-    top: 170px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: #B4B4B4;
-}
-
-.lineDiv{
-    position: absolute;
-    width: 447px;
-    height: 2px;
-    left: 320px;
-    top: 210px;
-    position: absolute;
-    width: 92.19px;
-    height: 2px;
-    left: 300px;
-    top: 210px;
-    background: #36597D;
-    border-radius: 12px;
-}
-
-.boxRiwayat{
+.box-notif{
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 0px;
-    gap: 375px;
-    position: absolute;
-    width: 533px;
-    height: 88px;
-    left: 320px;
-    top: 237px;
-    border-width: 1px 0px;
-    border-style: solid;
-    border-color: #E3E8EF;
-}
-
-.pertemuan{
-    width: 123px;
-    height: 24px;
-    margin-top: 88px;
-    margin-left: 25px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: #181E22;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 28px;
+    gap: 10px;
+    width: 624px;
+    height: 79px;
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    border-radius: 8px 8px 8px 8px;
     flex: none;
     order: 0;
     flex-grow: 0;
+    margin: -2px 0px;
 }
 
-.tanggal{
-    width: 123px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: 25px;
+.displayNotif{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+width: 568px;
+height: 55px;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+}
+
+.notifTeks{
+    margin-top: -5px;
+    width: 497px;
+    height: 16px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: #9B9B9B;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-.ruangan{
-    width: 123px;
-    height: 20px;
-    margin-top: -17px;
-    margin-left: 25px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: #9B9B9B;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    color: #6d6f70;
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
 }
 
-.gambarPresensiDone{
-    width: 32px;
-    height: 32px;
-    margin-left: 500px;
-    margin-top: -90px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+.hour-notif{
+width: 100px;
+height: 16px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.2px;
+color: #828282;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin-top: 30PX;
+margin-left: -510px;
 }
 
-.hadirPresensi{
-    width: 35px;
-    height: 20px;
-    margin-left: 500px;
-    margin-top: 0px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: #828282;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+.imgNotif{
+    width: 55px;
+height: 55px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.judulNotif{
+position: absolute;
+width: 104px;
+height: 32px;
+left: 300px;
+top: 130px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+color: #181E22;
 }

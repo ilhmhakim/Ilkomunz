@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presensi</title>
-    <link rel="stylesheet" href="riwayatPresensi.css">
+    <link rel="stylesheet" href="notificationPage.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> 
 </head>
 <body>
+    <section class="topBar">
+        <input class="searchBar contentSB cariKomunitas" type="text" placeholder="Cari Komunitas">
+        <img class="searchIcon" src="Assets/light.svg" alt="searchIcon">
+        <button class="notification" onclick="action.href='#'" type="button">
+            <div class="iconNotif"></div>
+        </button>
+    </section>
+
+    <h1 class="judulNotif">
+        Notifikasi
+    </h1>
+
     <section class="navbar-ver-1">
         <div class="overlap-group3">
             <div class="overlap-group-2">
@@ -65,24 +77,29 @@
 
     <section class="post-card">
         <div class="overlap-group2">
-            <section class="topBar">
-                <h1 class="topPresensi">Riwayat Presensi</h1>
-                <div>
-                    <a href="" class="agriUXbar">AgriUX</a>
-                    <a href="" class="csiBar">CSI</a>
-                    <a href="" class="agribotBar">Agribot</a>
-                </div>
-                <h2 class="persentaseHadir">10%</h2>
-                <h1 class="kehadiranPresensi">Kehadiran</h1>
-                <div class="lineDiv"> </div>
-            </section>
-                <div class="boxRiwayat"></div>
-                <h2 class="pertemuan">Pertemuan 1</h2>
-                <h2 class="tanggal">Rabu, 1 Maret 2023</h2>
-                <h2 class="ruangan">RKU 2.01</h2>
-                <img src="Assets/Tick Square.png" class="gambarPresensiDone" alt="">
-                <h2 class="hadirPresensi">Hadir</h2>
-            </div>  
+                <section class="box-notif">
+                    <div class="displayNotif">
+                        <img src="Assets/Mask group.png" class="imgNotif" alt="">
+                        <h2 class="notifTeks">Nadira Nur Abanisa berkomentar pada postingan Anda</h2>
+                        <h2 class="hour-notif">4 jam yang lalu</h2>
+                    </div>
+                </section>
+                <section class="box-notif">
+                    <div class="displayNotif">
+                        <img src="Assets/Mask group (1).png" class="imgNotif" alt="">
+                        <h2 class="notifTeks">Kevin Nur Adisantos menyukai postingan Anda</h2>
+                        <h3 class="hour-notif">8 jam yang lalu</h3>
+                    </div>
+                </section>
+                <section class="box-notif">
+                    <div class="displayNotif">
+                        <img src="Assets/logo_AgriUX 1.png" class="imgNotif" alt="">
+                        <h2 class="notifTeks">AgriUX memposting: Can Chat GPT boost your UX Design Skills? This deck includes a number of prompts that UX designers can do...</h2>
+                        <h3 class="hour-notif">10 jam yang lalu</h3>
+                    </div>
+                </section>
+               
+            </div>
     </section>
 
     <section class="frameKanan">
