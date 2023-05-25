@@ -1,4 +1,4 @@
-html {
+html{
     background-color: #FCFCFD;
 }
 
@@ -27,7 +27,7 @@ html {
     width: fit-content;
 }
 
-.notification {
+.notification{
     align-items: flex-start;
     background-color: #FFFFFF;
     border: 1px solid;
@@ -118,7 +118,6 @@ html {
 .x-active {
     align-items: flex-start;
     border-radius: 8px;
-    border-style: double;
     border: 0px;
     background-color: #181E22;
     display: flex;
@@ -132,7 +131,6 @@ html {
 .x-unactive {
     align-items: flex-start;
     border-radius: 8px;
-    border-style: double;
     background-color: #FCFFD9;
     border-color: #FCFFD9;
     display: flex;
@@ -176,10 +174,6 @@ html {
 }
 
 .presensi {
-    color: #FFFFFF;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1px;
@@ -204,6 +198,10 @@ html {
 }
 
 .beranda {
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 0;
     line-height: 24px;
     margin-top: -1px;
@@ -1048,7 +1046,7 @@ html {
     color: #181E22;
 }
 
-.agriUXbar {
+.agriUXbar{
     position: absolute;
     width: 115px;
     height: 44px;
@@ -1064,7 +1062,7 @@ html {
 
 }
 
-.csiBar {
+.csiBar{  
     position: absolute;
     width: 35px;
     height: 28px;
@@ -1076,9 +1074,10 @@ html {
     font-size: 22px;
     line-height: 28px;
     color: #B4B4B4;
+    text-decoration: none;
     }
 
-.agribotBar {
+.agribotBar{
     position: absolute;
     width: 74px;
     height: 28px;
@@ -1093,7 +1092,7 @@ html {
     text-decoration: none;
 }
 
-.presensiButton1 {
+.presensiButton1{
     position: absolute;
     left: 370px;
     top: 280px;
@@ -1106,7 +1105,7 @@ html {
     align-items: center;
 }
 
-.presensiButton2 {
+.presensiButton2{
     display: flex;
     margin-left: 40.6px;
     margin-top: 40.6px;
@@ -1135,11 +1134,11 @@ html {
     background-image: url(Assets/check-fill-active.svg);
 }
 
-.presensiButton2:active {
-    transform: skewX;
+.presensiButton2:active{
+    transform:skewX;
 }
 
-.presensiTeks {
+.presensiTeks{
     width: 258.75px;
     height: 253.74px;
     font-family: 'Roboto';
@@ -1158,7 +1157,7 @@ html {
     justify-content: center;
 }
 
-.buttonRiwayatPresensi {
+.buttonRiwayatPresensi{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1176,7 +1175,7 @@ html {
     border: none;
 }
 
-.tulisanButtonRiwayatPresensi {
+.tulisanButtonRiwayatPresensi{
     width: 124px;
     height: 24px;
     font-family: 'Roboto';
@@ -1190,10 +1189,10 @@ html {
     color: #36597D;
     flex: none;
     order: 0;
-    flex-grow: 0;
+    flex-grow: 0; 
 }
 
-.dropdownPertemuan {
+.dropdownPertemuan{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -1217,7 +1216,7 @@ html {
     color: #36597D;
 }
 
-.optiondropdown {
+.optiondropdown{
     width: 102px;
     height: 24px;
     font-family: 'Roboto';
