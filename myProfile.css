@@ -244,13 +244,18 @@ html {
 }
 
 .rect-bg {
-    background-color: #FCFFD9;
     position: absolute;
     border-radius: 8px;
     width: 1200px;
     height: 254px;
     top: 0;
     z-index: 1;
+}
+
+.rect-bg img {
+    width: 1200px;
+    height: 286px;
+    object-fit: cover;
 }
 
 .profile-my-profile {
@@ -365,6 +370,39 @@ html {
     font-size: 14px;
 }
 
+.buka-tutup-profil {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #CDCDCD;
+    border-style: double;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #FFFFFF;
+    margin-top: 300px;
+    margin-right: 240px;
+
+    &:hover {
+        border-color: #181E22;
+        border-style: double;
+    }
+}
+
+.buka-tutup-profil p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    color: #181E22;
+    font-weight: 600;
+    align-items: center;
+    font-size: 14px;
+}
+
 /* Pop Up Edit Profile */
 .profil-settings {
     display: none;
@@ -460,7 +498,6 @@ html {
     display: flex;
     position: absolute;
     z-index: 2;
-    right: 0;
     border-radius: 8px;
     border: 1px solid;
     border-color: #CDCDCD;
@@ -472,6 +509,7 @@ html {
     background-color: #FFFFFF;
     margin-top: 180px;
     margin-right: 60px;
+    margin-left: 1040px;
 
     &:hover {
         border-color: #181E22;
@@ -479,7 +517,45 @@ html {
     }
 }
 
+.edit-bg input {
+    opacity: 0;
+    width: 20px;
+}
+
 .edit-bg p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    color: #181E22;
+    font-weight: 600;
+    align-items: center;
+    font-size: 14px;
+}
+
+.submit-buton {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #CDCDCD;
+    border-style: double;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #FFFFFF;
+    margin-top: 180px;
+    margin-right: 60px;
+    margin-left: 940px;
+
+    &:hover {
+        border-color: #181E22;
+        border-style: double;
+    }
+}
+
+.submit-buton p {
     margin-top: 4px;
     margin-bottom: 0px;
     margin-left: 8px;
@@ -540,6 +616,7 @@ html {
 .post-card {
     align-items: flex-start;
     margin-left: 20px;
+    margin-right: 288px;
     margin-top: 20px;
     display: flex;
     height: 80px;
@@ -634,6 +711,7 @@ html {
     border-style: double;
     padding: 32px 36px;
     width: 540px;
+    z-index: 3;
 }
 
 .pop-up-foto input {
@@ -857,7 +935,7 @@ html {
 
 /* Mungkin Anda Kenal */
 .mungkin-anda-kenal {
-    position: relative;
+    position: absolute;
     background-color: #FFFFFF;
     border-radius: 8px;
     border: 1px solid;
@@ -865,8 +943,8 @@ html {
     color: #E3E8EF;
     padding: 20px 20px;
     width: 198px;
-    height: 114px;
-    margin-left: 20px;
+    max-height: max-content;
+    margin-left: 1230px;
     margin-top: 20px;
 }
 
@@ -1010,7 +1088,7 @@ html {
 .card-postingan {
     background-color: #FFFFFF;
     margin-left: 600px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 24px;
     padding-bottom: 24px;
     width: 580px;

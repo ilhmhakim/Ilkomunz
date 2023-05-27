@@ -77,6 +77,9 @@
                 <img src="Assets/pencil-line.svg" alt="pencil-line">
                 <p>Edit Profil</p>
             </button>
+            <button class="buka-tutup-profil">
+                <p>Tutup Pendaftaran</p>
+            </button>
             <div class="profil-settings" id="profileSettings">
                 <div class="top-bar-profil-settings">
                     <h4 class="judul-profil-settings">Edit Profil</h4>
@@ -123,11 +126,19 @@
                     popUpUserSetting.classList.remove('show-popup3');
                 }
             </script>
-            <button class="edit-bg">
+            <button class="edit-bg" >
                 <img src="Assets/pencil-line.svg" alt="pencil-line">
-                <p>Edit</p>
+                <input type="file">
             </button>
-            <div class="rect-bg"></div>
+
+            <button class="submit-buton">
+                <p>Submit</p>
+            </button>
+            
+            <button class="submit-button">Submit</button>
+            <div class="rect-bg">
+                <img src="Assets/BG.svg" alt="bg">
+            </div>
         </div>
     </section>
 
@@ -250,6 +261,20 @@
                 <img class="icon-add-user" src="Assets/add-user-ico.svg" alt="">
                 <p>Ikuti</p>
             </button>
+
+            <div class="profil-other-user">
+                <div class="foto-profil-other-user">
+                    <img src="Assets/profil-other-user.svg" alt="">
+                </div>
+                <div class="nama-status-other-user">
+                    <h4 class="nama-other-user">Raka Ganz</h4>
+                    <p class="status-other-user">Mahasiswa Ilmu Komputer</p>
+                </div>
+            </div>
+            <button class="follow-other-user">
+                <img class="icon-add-user" src="Assets/add-user-ico.svg" alt="">
+                <p>Ikuti</p>
+            </button>
         </section>
     </section>
 
@@ -273,25 +298,6 @@
                 <div class="nama-status-di-postingan">
                     <h4>Andhika Ramadhani</h4>
                     <p>Mahasiswa</p>
-                </div>
-            </div>
-            <a href="#pop-up-more-square" class="titik-tiga-di-post">
-                <img src="Assets/More Square.svg" alt="More Square">
-            </a>
-            <div class="content-pop-up">
-                <div id="pop-up-more-square">
-                    <button class="salin-link">
-                        <img src="Assets/salin-link-ico.svg" alt="salin-link">
-                        <p>Salin link</p>
-                    </button>
-                    <button class="hide-post">
-                        <img src="Assets/archive-line.svg" alt="hide-post">
-                        <p>Arsipkan Postingan</p>
-                    </button>
-                    <button class="report-post">
-                        <img src="Assets/delete-bin-5-line.svg" alt="report-post">
-                        <p>Hapus Postingan</p>
-                    </button>
                 </div>
             </div>
         </div>
@@ -349,7 +355,7 @@
                 </script>
             </div>
             <div class="bookmark-postingan">
-                <img class="bookmark-postingan" src="Assets/Bookmark.svg" alt="Bookmark">
+                <img class="bookmark-postingan" src="Assets/delete-bin-5-line.svg" alt="Bookmark">
             </div>
         </div>
     </section>
