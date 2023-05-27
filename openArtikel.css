@@ -329,8 +329,11 @@ html{
     background-color: #FFFFFF;
 }
 
-.trending-img {
+.trending-img img{
     width: 545px;
+    max-width: 100%;
+    align-items: center;
+    height: 200px;
 }
 
 .trending-in-article {
