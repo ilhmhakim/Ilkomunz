@@ -329,8 +329,11 @@ html{
     background-color: #FFFFFF;
 }
 
-.trending-img {
+.trending-img img{
     width: 545px;
+    max-width: 100%;
+    align-items: center;
+    height: 200px;
 }
 
 .trending-in-article {
@@ -600,12 +603,18 @@ html{
 }
 
 .profile-2 {
-    background-image: url(Assets/Profile.png);
     background-size: 100% 100%;
     height: 60px;
     left: 110px;
     position: absolute;
     top: 41px;
+    width: 60px;
+    border: 0px;
+    border-radius: 100px;
+}
+
+.profile-2 img {
+    height: 60px;
     width: 60px;
 }
 

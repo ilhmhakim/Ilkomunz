@@ -1135,7 +1135,6 @@ html {
 }
 
 .profile-2 {
-    background-image: url(Assets/Profile.png);
     background-size: 100% 100%;
     height: 60px;
     left: 110px;
@@ -1144,6 +1143,11 @@ html {
     width: 60px;
     border: 0px;
     border-radius: 100px;
+}
+
+.profile-2 img {
+    height: 60px;
+    width: 60px;
 }
 
 .line-7 {
