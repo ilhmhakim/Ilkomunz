@@ -3,165 +3,241 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-	<title>Profile - {{user_profile.user.username}}</title>
-   <!-- <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> -->
-    
-    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/color.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="{% static 'realcss/liatAkunOrang.css' %}">
 </head>
+
 <body>
-<!--<div class="se-pre-con"></div>-->
-<div class="theme-layout">
-	
-	</div>
-	
-	<section>
-			<div class="feature-photo">
-				<figure><img src="{% static 'images/resources/timeline-1.jpg' %}" alt=""></figure>
-				<form action="/follow" method="POST">
-					{% csrf_token %}
-					<div class="add-btn">
-					<span style="color: white; font-size: 27px; margin-right: 520px;"><b><u><a href="/">Home</a></u></b></span>
-					{% if user_post_length == 0 %}
-					<span style="color: white; font-size: 27px;"><b> No Post</b></span>
-					{%else%}
-					<span style="color: white; font-size: 27px;"><b> {{user_post_length}} Post</b></span>
-					{%endif%}
-					<span style="color: white; font-size: 27px;"><b>{{user_follower}} Followers</b></span>
-					<span style="color: white; font-size: 27px;"><b>{{user_following}} Following</b></span>
 
-					<input type="hidden" value="{{user.username}}" name="follower"/>
-					<input type="hidden" value="{{user_object.username}}" name="user"/>
-					{%if user_object.username != user.username %}
-					<a><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</button></a>
-					{%else%}
-					<a href = "/settings"style="background-color: #ffc0cb; border: #ffc0cb;">Account Settings</a>
-					{%endif%}
-					</div>
-				</form>
-
-				<!-- <form class="edit-phto">
-					<i class="fa fa-camera-retro"></i>
-					<label class="fileContainer">
-						Upload Cover Photo
-					<input type="file"/>
-					</label>
-				</form> -->
-				<div class="container-fluid">
-					<div class="row merged">
-						<div class="col-lg-2 col-sm-3">
-							<div class="user-avatar">
-								<figure>
-									<img src=" {{user_profile.profileimg.url}}" style="height: 250px; width: 100%;" alt="">
-									<form class="edit-phto">
-										<i class="fa fa-camera-retro"></i>
-										<label class="fileContainer">
-											<a href="#account-settings">Upload Profile Photo</a>
-										</label>
-									</form>
-								</figure>
-							</div>
-						</div>
-						<div class="col-lg-10 col-sm-9">
-							<div class="timeline-info">
-								<ul>
-									<li class="admin-name">
-									  <h5 style="color: black;white-space: nowrap; width: 110px; font-size: 27px;"><b> @{{user_profile.user.username}}</b><!--<i class="fa fa-check-circle" style="color: #48dbfb;" aria-hidden="true"></i>--></h5>
-									  <!--<span>Group Admin</span>-->
-									</li>
-									<!--<li>
-										<a class="" href="javascript:void(0)" title="" data-ripple="">Go live!</a>
-										<a class="" href="javascript:void(0)" title="" data-ripple="">Music</a>
-										<a class="" href="emporium/index-3.html" title="" data-ripple="">Emporium</a>
-										<a class="" href="fitness/index.html" title="" data-ripple="">Health Inspection</a>
-										<a class="" href="settings/account-setting.html" title="" data-ripple="">Settings</a>
-										<a class="" href="javascript:void(0)" title="" data-ripple="">Upload</a>
-										<a class="" href="time-line.html" title="" data-ripple="">time line</a>
-										<a class="" href="timeline-photos.html" title="" data-ripple="">Photos</a>
-										<a class="" href="timeline-videos.html" title="" data-ripple="">Videos</a>
-										<a class="" href="timeline-friends.html" title="" data-ripple="">Friends</a>
-										<a class="" href="timeline-groups.html" title="" data-ripple="">Groups</a>
-										<a class="" href="about.html" title="" data-ripple="">about</a>
-										<a class="" href="#" title="" data-ripple="">more</a>
-
-									</li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!-- top area -->
-		<section>
-			<div class="bio">
-				{{user_profile.bio}}
-			</div>
-		</section>
-		
-	<section>
-		<div class="gap gray-bg">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="row" id="page-contents">
-							<div class="col-lg-3">
-								<aside class="sidebar static">
-									
-									
-									
-								</aside>
-							</div><!-- sidebar -->
-							
+    <section class="navbar-ver-1">
+        <div class="overlap-group3">
+            <div class="overlap-group-2">
+                <div class="overlap-group-1-1 overlap-group-1_5">
+                    <div class="logo-with-text">
+                        <img class="logo-with-text" src="{% static 'real/Logo with Text.svg' %}" alt="logo-with-text">
+                    </div>
+                </div>
+                <div class="change-lay-out">
+                    <img class="chevron-left" src="{% static 'real/chevroLeft_ico.svg' %}" alt="">
+                </div>
+            </div>
+            <div class="navbar-comp">
+                <div class="bg"></div>
+                <button class="x-active" onclick="location.href='../'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/beranda_ico.svg' %}" alt="beranda-ico">
+                        <div class="beranda">Beranda</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='../komunitas'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/Community_ico.svg' %}" alt="Community_ico">
+                        <div class="komunitas">Komunitas</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='../presensipage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/presensi_ico.svg' %}" alt="presensi_ico">
+                        <div class="presensi">Presensi</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='../artikelpage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/article_ico.svg' %}" alt="article_ico">
+                        <div class="artikel">Artikel</div>
+                    </div>
+                </button>
+                <div class="rect-3105"></div>
+                <div class="log-out">
+                    <div class="frame-1561-1">
+                        <img class="ui" src="{% static 'real/logOut_ico.svg' %}" alt="log-out">
+                        <a href="../logout"><div class="log-out">Logout</div></a>
+                    </div>
+                </div>
+                <div class="frame-1566-1">
+                    <img class="flag" src="{% static 'real/flag_ico.svg' %}" alt="flag_ico">
+                    <div class="bahasa">Bahasa</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+    <section class="top-profile">
+        <div class="rect-white">
+            <button class="back-button" onclick="location.href='../'">
+                <img src="{% static 'real/back-icon-before.svg' %}" alt="back-icon">
+                <p>Back</p>
+            </button>
+            <div class="profile-my-profile">
+                <img class="photo-profile" src="{{user_profile.profileimg.url}}" alt="profile-my-profile">
+                <h3 class="nama-my-profile">{{user_profile.nama}}</h3>
+                <p class="status-mahasiswa">Mahasiswa</p>
+                <p class="jumlah-follower">{{user_follower}} Follower</p>
+            </div>
+            <form action="/follow" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{user.username}}" name="follower"/>
+                <input type="hidden" value="{{user_object.username}}" name="user"/>
+                <button type = "submit" class="edit-profile">
+                    <p>{{button_text}}</p>
+                </button>
+            </form>
+            {% comment %} <form action="/daftar" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{user.buka}}" name="buka"/>
+                <input type="hidden" value="{{user.username}}" name="user"/> {% endcomment %}
+                {%if not tes and follower_profile.tipe == 'user' and user_profile.buka == 1%}
+                <a class="req-join" target = "_blank" href="https://ipb.link/daftar-komun-csi-ilkomunz">
+                    <p>Request Join</p>
+                </a>
+                {%elif tes and follower_profile.tipe == 'user'%}
+                <button class="req-join">
+                    <p>Joined</p>
+                </button>
+                {%endif%}
+            {% comment %} </form> {% endcomment %}
+            <div class="rect-bg">
+                <img src="{{user_profile.sampulimg.url}}">
+            </div>
+        </div>
+    </section>
 
+    <section class="tentang">
+        <div class="judul-tentang">
+            <h4>Tentang</h4>
+        </div>
+        <div class="isi-tentang">
+            <p class="ultah">{{user_profile.bio}}</p>
+        </div>
+    </section>
 
+    <section class="artikel-saya-section">
+        <div class="judul-section-artikel">
+            <h4>Artikel {{user_profile.nama}}</h4>
+        </div>
+        <div class="divider-artikel-saya">
+            <img src="{% static 'real/divider-artikel.svg' %}" alt="divider-artikel">
+        </div>
+        {% for item in artikel_list %}
+        <div class="bagian-artikel-saya">
+            <a style="color: inherit; text-decoration: none;" href="../artikel/{{item.id_artikel}}"><h5>{{item.judul}}</h5></a>
+            <a style="color: inherit; text-decoration: none;" href="../artikel/{{item.id_artikel}}"><img src="{{item.image.url}}" alt="foto-artikel-saya"></a>
+        </div>
+        {% endfor %}
+    </section>
 
+    {% for post in user_posts reversed%}
+    <section class="card-postingan">
+        <div class="top-bar-di-post">
+            <div class="profil-di-post">
+                <a href="profile/{{post.user}}"> <img src="{{user_profile.profileimg.url}}"></a>
+                <div class="nama-status-di-postingan">
+                    <div class="name">{{post.user}}</div>
+                    {% if user_profile.tipe == 'komunitas' %}
+                    <p>Komunitas</p>
+                    {% else %}
+                    <p>Mahasiswa</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% comment %} <a href="#pop-up-more-square" class="titik-tiga-di-post">
+                <img src="{% static 'real/More Square.svg' %}" alt="More Square">
+            </a>
+            <div class="content-pop-up">
+                <div id="pop-up-more-square">
+                    <button class="salin-link">
+                        <img src="{% static 'real/salin-link-ico.svg' %}" alt="salin-link">
+                        <p>Salin link</p>
+                    </button>
+                    <button class="hide-post">
+                        <img src="{% static 'real/hide-post-svg.svg' %}" alt="hide-post">
+                        <p>Sembunyikan postingan</p>
+                    </button>
+                    <button class="report-post">
+                        <img src="{% static 'real/report-post-ico.svg' %}" alt="report-post">
+                        <p>Laporkan postingan</p>
+                    </button>
+                </div>
+            </div> {% endcomment %}
+        </div>
+        <div class="caption-di-post">
+            <p class="caption">{{post.caption}}</p>
+        </div>
+        <div class="foto-di-post">
+            <img src="{{post.image.url}}" alt="IMG_0180">
+        </div>                    
+        {% if post.no_of_likes != 0%}
+            <h5 class="liked-by-di-post">Liked by {{post.no_of_likes}}</h5>
+        {%endif%}
+        <div class="opsi-reaction">
+            <div class="like-comment">
+                <a href="/likepost?post_id={{post.id}}&pk={{user_profile.user.username}}">
+                    <img class="like-postingan" src="{% static 'real/Heart.svg' %}" alt="Heart">
+                </a>
+                <a><img class="komen-postingan" src="{% static 'real/Chat.svg' %}" alt="chat"></a>
+                <div class="komen-di-postingan">
+                    <div class="top-bar-komentar">
+                        <h4>Komentar</h4>
+                        <img src="{% static 'real/close-fill.svg' %}" alt="close-fill">
+                    </div>
+                    <div class="komen-orang">
+                        {% for item in comment_posts %}
+                            {% if item.post_id == post.id|stringformat:"s" %}
+                            <div class="profil-orang-komen">
+                                <img src="{{ item.img.url }}" width="25" height="25" alt="profil-orang-komen">
+                                <div class="waktu-orang-komen">
+                                    <div class="nama-status-orang-komen">
+                                        <h5>{{ item.user }}</h5>
+                                    </div>
+                                    <p class="waktu-komen">{{ item.time_created }}</p>
+                                </div>
+                            </div>
+                            <div class="komennya-orang">
+                                <p>{{ item.comment }}</p>
+                            </div>
+                            <br>
+                            {% endif %}
+                        {% endfor %}
+                        <form method="post" action="../comment">
+                        {% csrf_token %}
+                        <input type="hidden" value="{{post.id}}" name="post_id"/>
+                        <input type="hidden" value="{{follower_profile.user.username}}" name="pk"/>
+                        <input type="hidden" value="{{user_profile.user.username}}" name="cek"/>
+                        <div class="orang-punya-komen">
+                            <img class="kita-orang-komen" src="{{follower_profile.profileimg.url}}" alt="">
+                            <input name="content" class="komenan-kita-orang" type="text" placeholder="Tuliskan komentarmu">
+                            <button class="submit-komen-button">
+                                <img src="{% static 'real/send-plane.svg' %}" alt="">
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const komenButton = document.querySelector('.komen-postingan');
+                const closeButtonKomen = document.querySelector('.top-bar-komentar img');
+                const popUpKomentar = document.querySelector('.komen-di-postingan');
 
+                komenButton.addEventListener('click', () => {
+                    popUpKomentar.classList.add('show-popup4');
+                });
 
-
-
-							<div class="col-lg-6">
-								<div class="central-meta">
-									<ul class="photos">
-										{% for post in user_posts %}
-										<li>
-											<a class="strip" href="{{post.image.url}}" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-												<img src="{{post.image.url}}" style="height: 250px; width: 300px;" alt=""></a>
-										</li>
-										{% endfor %}
-										
-									</ul>
-									<!--<div class="lodmore"><button class="btn-view btn-load-more"></button></div>-->
-								</div><!-- photos -->
-							</div><!-- centerl meta -->
-							<div class="col-lg-3">
-								<aside class="sidebar static">
-									
-								</aside>
-							</div><!-- sidebar -->
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>	
-	</section>
-
-	
-	
-	<script data-cfasync="false" src="{% static '../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="{% static 'js/main.min.js' %}"></script>
-	<script src="{% static 'js/script.js' %}"></script>
-
-</body>	
-
+                closeButtonKomen.addEventListener('click', () => {
+                    popUpKomentar.classList.remove('show-popup4');
+                });
+            </script>
+            {% comment %} <div class="bookmark-postingan">
+                <img class="bookmark-postingan" src="{% static 'real/Bookmark.svg' %}" alt="Bookmark">
+            </div> {% endcomment %}
+        </div>
+    </section>
+    {% endfor %}
+</body>
 
 </html>

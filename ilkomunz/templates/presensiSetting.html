@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi</title>
+    <link rel="stylesheet" href="{% static 'realcss/presensiSetting.css'%}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> 
+</head>
+<body>
+    <section class="navbar-ver-1">
+        <div class="overlap-group3">
+            <div class="overlap-group-2">
+                <div class="overlap-group-1-1 overlap-group-1_5">
+                    <div class="logo-with-text">
+                        <img class="logo-with-text" src="{% static 'real/Logo with Text.svg' %}" alt="logo-with-text">
+                    </div>
+                </div>
+                <div class="change-lay-out">
+                    <img class="chevron-left" src="{% static 'real/chevroLeft_ico.svg' %}" alt="">
+                </div>
+            </div>
+            <div class="navbar-comp">
+                <div class="bg"></div>
+                <button class="x-active" onclick="location.href='/'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/beranda_ico.svg' %}" alt="beranda-ico">
+                        <div class="beranda">Beranda</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='komunitas'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/Community_ico.svg' %}" alt="Community_ico">
+                        <div class="komunitas">Komunitas</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='presensipage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/presensi_ico.svg' %}" alt="presensi_ico">
+                        <div class="presensi">Presensi</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='openArtikel'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/article_ico.svg' %}" alt="article_ico">
+                        <div class="artikel">Artikel</div>
+                    </div>
+                </button>
+                <div class="rect-3105"></div>
+                <div class="log-out">
+                    <a href="/logout"><div class="frame-1561-1">
+                        <img class="ui" src="{% static 'real/logOut_ico.svg' %}" alt="log-out">
+                        <div class="log-out">Logout</div>
+                    </div></a>
+                </div>
+                <div class="frame-1566-1">
+                    <img class="flag" src="{% static 'real/flag_ico.svg' %}" alt="flag_ico">
+                    <div class="bahasa">Bahasa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="post-card">
+        <div class="overlap-group2">
+            <section class="topBar">
+                <h1 class="topPresensi">Presensi Settings</h1>
+                <h2 class="agriUXbar">{{user_profile.user.username}}</h2>
+                {% comment %}c<h2 class="csiBar">CSI</h2>
+                <h2 class="agribotBar">Agribot</h2> {% endcomment %}
+                <h2 class="persentaseHadir">{{length}}</h2>
+                <h1 class="kehadiranPresensi">Presensi Aktif</h1>
+                <div class="lineDiv"> </div>
+            </section>
+                {% for item in pertemuan_list reversed %}
+                <div class="boxRiwayat">
+                </div>
+                {% for key,value in dict.items %}
+                    {% if item.kegiatan == key %}
+                    <h2 class="hadirPresensi">{{value}} Presensi</h2>
+                    {% endif %}
+                {% endfor %}
+                <h2 class="pertemuan">{{item.kegiatan}}</h2>
+                <h2 class="tanggal">{{ item.time_created|date:'l' }}, {{ item.time_created|date:'Y-m-d' }}</h2>
+                <br>
+                <h2 class="ruangan">{{item.tempat}}</h2>
+                <img src="{% static 'real/Activity.png'%}" class="gambarPresensiDone" alt="">
+                {% endfor %}
+
+                <a href="presensiadd"><div>
+                    <img src="{% static 'real/add-circle-fill.png'%}" class="addCircle" alt="">
+                    <h2 class="tambahPresensi">Tambah Presensi</h2>
+                </div></a>
+            </div>
+    </section>
+
+    <section class="frameKanan">
+        <div class="frameDalem">
+            <div class="myProfile">
+                <div class="judulAtas">
+                    <h1 class="title">Profil Saya</h1>
+                    <button class="go-to-settings" onclick="action.href='#'" type="button">
+                        <img class="iconGear" src="{% static 'real/Icon nonActive.svg'%}" alt="iconGear">
+                    </button>
+                </div>
+                <div class="profileCard">
+                    <div class="overlap-group">
+                        <img class="line-7" src="{% static 'real/Line-7.svg' %}" alt="Line 7">
+                        <div class="rect-405"><img width="280" height="75" src="{{user_profile.sampulimg.url}}"></div>
+                        <a href="/profile/{{user_profile.user.username}}" class="profile-2"><img heighy="100" width ="100"src="{{user_profile.profileimg.url}}" alt="profile-2"></a>
+                    </div>
+                    <div class="nama-status">
+                        <a href="profile/{{user_profile.user.username}}"><div class="nameMhs">{{user_profile.nama}}</div></a>
+                        <div class="mhs-1">Mahasiswa</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            {% comment %} <div class="followedKomun">
+                <div class="overlap-grup-1">
+                    <div class="komunitasYangDiikuti">Komunitas yang diikuti</div>
+                    <img class="line-6" src="{% static 'real/Line-6.svg'%}" alt="Line 6">
+                    
+                    {% for item in komun %}
+                    <div class="folcmnt">
+                        <div class="komun-1">
+                            <div class="flex-col">
+                                <div class="csi">{{item.nama}}</div>
+                                <div class="jmlhAnggota">500 Anggota</div>
+                                <div class="flwdButton">
+                                    <img src="{% static 'real/check-line 1.svg' %}" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Joined</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="{{item.profileimg.url}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %} {% endcomment %}
+                    {% comment %} <div class="folcmnt">
+                        <div class="komun-2">
+                            <div class="flex-col">
+                                <div class="agriUX">AgriUX</div>
+                                <div class="jmlhAnggota">500 Anggota</div>
+                                <div class="flwdButton">
+                                    <img src="Assets/check-line 1.svg" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Diikuti</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="Assets/logo_AgriUX 1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="folcmnt">
+                        <div class="komun-3">
+                            <div class="flex-col">
+                                <div class="agribot">Agribot </div>
+                                <div class="jmlhAnggota">500 Anggota</div>
+                                <div class="flwdButton">
+                                    <img src="Assets/check-line 1.svg" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Diikuti</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="Assets/logo_agribot.png" alt="">
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

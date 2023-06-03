@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Artikel</title>
+    <link rel="stylesheet" href="{% static 'realcss/openArtikel.css'%}">
+</head>
+
+<body>
+
+    <section class="navbar-ver-1">
+        <div class="overlap-group3">
+            <div class="overlap-group-2">
+                <div class="overlap-group-1-1 overlap-group-1_5">
+                    <div class="logo-with-text">
+                        <img class="logo-with-text" src="{% static 'real/Logo with Text.svg'%}" alt="logo-with-text">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-comp">
+                <div class="bg"></div>
+                <button class="x-unactive" onclick="location.href='/'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/beranda_unactive.svg'%}" alt="beranda-ico">
+                        <div class="beranda">Beranda</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='komunitas'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/Community_ico.svg'%}" alt="Community_ico">
+                        <div class="komunitas">Komunitas</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='presensipage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/presensi_ico.svg'%}" alt="presensi_ico">
+                        <div class="presensi">Presensi</div>
+                    </div>
+                </button>
+                <button class="x-active" onclick="location.href='artikelpage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/article-active.svg'%}" alt="article_ico">
+                        <div class="artikel">Artikel</div>
+                    </div>
+                </button>
+                <div class="rect-3105"></div>
+                <div class="log-out">
+                    <div class="frame-1561-1">
+                        <img class="ui" src="{% static 'real/logOut_ico.svg'%}" alt="log-out">
+                        <div class="log-out">Logout</div>
+                    </div>
+                </div>
+                <div class="frame-1566-1">
+                    <img class="flag" src="{% static 'real/flag_ico.svg'%}" alt="flag_ico">
+                    <div class="bahasa">Bahasa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <form action="/searchartikel" method="POST">
+        {% csrf_token %}
+        <section class="topBar">
+            <input class="searchBar contentSB cariKomunitas" type="text" name="username" placeholder="Cari Artikel">
+            <img class="searchIcon" src="{% static 'real/light.svg' %}" alt="searchIcon">
+            <button class="notification" onclick="location.href='notification'" type="button">
+                <div class="iconNotif"><img src="{% static 'real/notification.svg' %}"></div>
+            </button>
+        </section>
+        </form>
+
+    <section class="trending-section">
+        {% if count != 1 %}
+        <button class="chevron-left" onclick="location.href='/artikelpage?add=no&id={{artikel.id_artikel}}&tipe_artikel={{tipe}}'" type="button">
+            <img class="chevron-left-ico" src="{% static 'real/chevron-left-ico.svg'%}" alt="chevron-left-ico">
+        </button>
+        {% else %}
+        <button class="chevron-left" type="button">
+            <img class="chevron-left-ico" src="{% static 'real/chevron-left-ico.svg'%}" alt="chevron-left-ico">
+        </button>
+        {% endif %}
+        <div class="in-content">
+            <div class="trending-img">
+                <a style="color: inherit; text-decoration: none;" href="artikel/{{artikel.id_artikel}}"><img widht = "400" height = "200" src="{{artikel.image.url}}" alt=""></a>
+            </div>
+            <div class="trending-desc">
+                <div class="trending-in-article">
+                    <img class="graph-ico" src="{% static 'real/graph-ico.svg'%}" alt="graph-ico">
+                    <p>Baru di Artikel</p>
+                </div>
+                <div class="trending-desc-2">
+                    {% comment %} <div class="trending-number">01</div> {% endcomment %}
+                    <div class="trending-desc-3">
+                        <div class="creator-profile-in-trend">
+                            <div class="pic-trend-profile">
+                                {% for user in user_list %}
+                                {% if user.user.username == artikel.user %}
+                                <img src="{{user.profileimg.url}}" width="25" height="15" alt="the-pyCoach-profile-picture">
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <a style="color: inherit; text-decoration: none;" href="profile/{{artikel.user}}"><div class="creator-trend-name">{{artikel.user}}</div></a>
+                        </div>
+                        <a style="color: inherit; text-decoration: none;" href="artikel/{{artikel.id_artikel}}"><div class="trending-title">
+                            {{artikel.judul}}
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if count != 2 %}
+        <button class="chevron-right" onclick="location.href='/artikelpage?add=yes&id={{artikel.id_artikel}}&tipe_artikel={{tipe}}'" type="button">
+            <img class="chevron-right-ico" src="{% static 'real/chevron-right-ico.svg'%}" alt="chevron-right-ico">
+        </button>
+        {% else %}
+        <button class="chevron-right" type="button">
+            <img class="chevron-right-ico" src="{% static 'real/chevron-right-ico.svg'%}" alt="chevron-right-ico">
+        </button>
+        {% endif %}
+    </section>
+
+    <section class="trending-topics">
+        <h2 class="discover">Discover more of what matters to you</h2>
+        <div class="pilihan-topik">
+            {% for i in tema_list %}
+            <button class="topik" onclick="location.href='/artikelpage?id={{artikel.id_artikel}}&tipe_artikel={{i}}'">{{i}}</button>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% for item in tema%}
+    <section class="news">
+        <div class="isi-konten-news">
+            <div class="news-cc">
+                <div class="content-news">
+                    <div class="profil-news">
+                        {% for user in user_list %}
+                        {% if user.user.username == item.user %}
+                        <div class="profil-img-news">
+                            <img src="{{user.profileimg.url}}" width="25" height="15" alt="news1-creator">
+                        </div>
+                        {%endif%}
+                        {% endfor %}
+                        <a style="color: inherit; text-decoration: none;" href="profile/{{item.user}}"><p class="creator-name">{{item.user}}</p></a>
+                    </div>
+                    <a style="color: inherit; text-decoration: none;" href="artikel/{{item.id_artikel}}"><h3 class="judul-news">{{item.judul}}</h3></a>
+                    {% if item.content|length > 130 %}
+                    <a style="color: inherit; text-decoration: none;" href="artikel/{{item.id_artikel}}"><p class="desc-news">{{ item.content|slice:":130" }}...</p></a>
+                    {% else %}
+                    <a style="color: inherit; text-decoration: none;" href="artikel/{{item.id_artikel}}"><p class="desc-news">{{item.content}}</p></a>
+                    {% endif %}
+                    <div class="tanggal-waktu-baca">
+                        <p class="tanggal-news">{{ item.created_at|date:'Y-m-d' }}</p>
+                    </div>
+                </div>
+                <div class="gambar-news">
+                    <img width="100" height="100" src="{{item.image.url}}" alt="news1">
+                </div>
+            </div>
+        </div>
+        <div class="divider-news">
+            <img src="{% static 'real/divider-artikel.svg'%}" alt="divider-artikel">
+        </div>
+    </section>
+    {% endfor %}
+
+    <section class="frameKanan">
+        <div class="frameDalem">
+            <div class="myProfile">
+                <div class="judulAtas">
+                    <h1 class="title">Profile</h1>
+                    <button class="go-to-settings" onclick="action.href='/profile/{{user_profile.user.username}}'" type="button">
+                        <img class="iconGear" src="{% static 'real/Icon nonActive.svg'%}" alt="iconGear">
+                    </button>
+                </div>
+                <div class="profileCard">
+                    <div class="overlap-group">
+                        <img class="line-7" src="{% static 'real/Line-7.svg'%}" alt="Line 7">
+                        <div class="rect-405"><img width="280" height="75" src="{{user_profile.sampulimg.url}}"></div>
+                        <div class="profile-2"></div>
+                        <a href="profile/{{user_profile.user.username}}" class="profile-2"><img heighy="100" width ="100"src="{{user_profile.profileimg.url}}" alt="profile-2"></a>
+                    </div>
+                    <div class="nama-status">
+                        <div class="nameMhs">{{user_profile.nama}}</div>
+                        {% if user_profile.tipe == 'komunitas' %}
+                        <div class="mhs-1">Mahasiswa</div>
+                        {% else %}
+                        <div class="mhs-1">Komunitas</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="artikelSaya">
+                <div class="overlap-grup-1">
+                    <div class="artikelYangDitulis">Artikel Saya</div>
+                    <img class="line-6" src="{% static 'real/Line-6.svg'%}" alt="Line 6">
+                    {%for item in my_artikel%}
+                    <div class="my-article">
+                        <div class="general">
+                            <div class="content-my-article">
+                                <div class="profil-kreator">
+                                    <div class="foto-profil-kreator">
+                                        <img src="{{user_profile.profileimg.url}}" widht="25" height="25" alt="article-creator-andhika-ramadhani">
+                                    </div>
+                                    <a style="color: inherit; text-decoration: none;" href="profile/{{user_profile.user.username}}"> <p class="nama-kreator">{{user_profile.nama}}</p></a>
+                                </div>
+                                <a style="color: inherit; text-decoration: none;" href="artikel/{{item.id_artikel}}">
+                                <h4 class="judul-my-article">
+                                    {{item.judul}}
+                                </h4>
+                                </a>
+                            </div>
+                            <div class="photo-my-article">
+                                <a color="inherit" text-decoration="none" href="artikel/{{item.id_artikel}}"><img widht="50" height="50" src="{{item.image.url}}" alt="artikel-saya-img-artikel"></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

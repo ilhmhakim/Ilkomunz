@@ -1,0 +1,250 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi</title>
+    <link rel="stylesheet" href="{% static 'realcss/isiPresensi.css'%}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> 
+</head>
+<body>
+    <h1 class="judulNotif">
+        Presensi Setting
+    </h1>
+    <br>
+    <section class="navbar-ver-1">
+        <div class="overlap-group3">
+            <div class="overlap-group-2">
+                <div class="overlap-group-1-1 overlap-group-1_5">
+                    <div class="logo-with-text">
+                        <img class="logo-with-text" src="{% static 'real/Logo with Text.svg' %}" alt="logo-with-text">
+                    </div>
+                </div>
+                <div class="change-lay-out">
+                    <img class="chevron-left" src="{% static 'real/chevroLeft_ico.svg' %}" alt="">
+                </div>
+            </div>
+            <div class="navbar-comp">
+                <div class="bg"></div>
+                <button class="x-active" onclick="location.href='/'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/beranda_ico.svg' %}" alt="beranda-ico">
+                        <div class="beranda">Beranda</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='komunitas'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/Community_ico.svg' %}" alt="Community_ico">
+                        <div class="komunitas">Komunitas</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='presensipage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/presensi_ico.svg' %}" alt="presensi_ico">
+                        <div class="presensi">Presensi</div>
+                    </div>
+                </button>
+                <button class="x-unactive" onclick="location.href='artikelpage'" type="button">
+                    <div class="content">
+                        <img class="ui" src="{% static 'real/article_ico.svg' %}" alt="article_ico">
+                        <div class="artikel">Artikel</div>
+                    </div>
+                </button>
+                <div class="rect-3105"></div>
+                <div class="log-out">
+                   <a href"/logout"><div class="frame-1561-1">
+                        <img class="ui" src="{% static 'real/logOut_ico.svg' %}" alt="log-out">
+                        <div class="log-out">Logout</div>
+                    </div></a>
+                </div>
+                <div class="frame-1566-1">
+                    <img class="flag" src="{% static 'real/flag_ico.svg' %}" alt="flag_ico">
+                    <div class="bahasa">Bahasa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <form method="post" action"presensiadd">
+    {% csrf_token %}
+    <section class="post-card">
+        <div class="overlap-group2">
+            <section class="namaKegiatan">
+                <h2 class="namaKegiatanTeks">Nama Kegiatan</h2>
+                <input class="boxNamaKegiatan" name="name">
+                    
+                </input>
+            </section>
+            
+            <section class="deskripsiKegiatan">
+                <h2 class="deskripsiKegiatanTeks">Deskripsi Kegiatan</h2>
+                <textarea class="boxDeskripsiKegiatan" name="deskripsi"></textarea>
+            </section>
+            
+            <section>
+                <h2 class="waktuKegiatanTeks">Waktu Selesai</h2>
+            </section>
+            
+            <section class="jamKegiatan">
+                <h3 class="jamKegiatanTeks">Jam</h3>
+                <input class="boxJamKegiatan" name="jam"></input>
+            </section>
+            
+            <section class="waktuKegiatan">
+                <h3 class="menitKegiatanTeks">Menit</h3>
+                <input class="boxMenitKegiatan" name="menit"></input>
+            </section>
+
+            <section class="tempatKegiatan">
+                <h3 class="tempatKegiatanTeks">Tempat</h3>
+                <input class="boxTempatKegiatan" name="tempat"></input>
+            </section>
+
+            <button class="buttonIsianPresensi" type="submit">
+                <h1 class="tulisanButtonIsianPresensi">SIMPAN</h1>
+            </button>
+
+            </div>
+    </section>
+    </form>
+
+    <section class="frameKanan">
+        <div class="frameDalem">
+            <div class="myProfile">
+                <form action="settings" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="judulAtas">
+                    <h1 class="title">Profil Saya</h1>
+                    {% comment %} <button class="go-to-settings" onclick="action.href='#'" type="button">
+                        <img class="iconGear" src="{% static 'real/Icon nonActive.svg' %}" alt="iconGear">
+                    </button>
+                    <div class="profil-settings">
+                        <div class="top-bar-profil-settings">
+                            <h4 class="judul-profil-settings">Pengaturan Profil</h4>
+                            <img src="{% static 'real/close-fill.svg' %}" alt="close-fill">
+                        </div>
+                        <div class="change-profile-picture">
+                            <img src="{{user_profile.profileimg.url}}" width = "100" height = "100" alt="change-profile-picture">
+                            <input type="file" name="image">
+                           <label for="profilePictureInput" class="button-ganti-pp">
+                                <img src="{% static 'real/pencil-line.svg' %}" alt="pencil-line">
+                                <p>Ganti profile picture</p>
+                            </label> 
+                        </div>
+                        <div class="detail-info-user">
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Nama</div>
+                                <input type="text" name="name" placeholder="{{user_profile.nama}}">
+                            </div>
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Bio</div>
+                                <input type="text" name="bio" placeholder="{{user_profile.bio}}">
+                            </div>
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Jurusan</div>
+                                <input type="text" name="jurusan" placeholder="{{user_profile.jurusan}}">
+                            </div>
+                            <div class="bagian-in-user-settings">
+                                <div class="judul-section">Angkatan</div>
+                                <input type="text" name="angkatan" placeholder="{{user_profile.angkatan}}">
+                            </div>
+                            <button class="button-ganti-pp" onclick="location.href='#'">
+                                <img src="{% static 'real/pencil-line.svg' %}" alt="pencil-line">
+                                <p>Ganti Identitas</p>
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        const userSettingButton = document.querySelector('.go-to-settings');
+                        const closeButtonUserSetting = document.querySelector('.top-bar-profil-settings img');
+                        const popUpUserSetting = document.querySelector('.profil-settings');
+
+                        userSettingButton.addEventListener('click', () => {
+                            popUpUserSetting.classList.add('show-popup3');
+                        });
+
+                        closeButtonUserSetting.addEventListener('click', () => {
+                            popUpUserSetting.classList.remove('show-popup3');
+                        });
+                    </script> {% endcomment %}
+                </div>
+                <div class="profileCard">
+                    <div class="overlap-group">
+                        <img class="line-7" src="{% static 'real/Line-7.svg' %}" alt="Line 7">
+                        <div class="rect-405"><img width="280" height="75" src="{{user_profile.sampulimg.url}}"></div>
+                        <a href="profile/{{user_profile.user.username}}" class="profile-2"><img heighy="100" width ="100"src="{{user_profile.profileimg.url}}" alt="profile-2"></a>
+                    </div>
+                    <div class="nama-status">
+                        <div class="nameMhs">{{user_profile.nama}}</div>
+                        {% if user_profile.tipe == 'komunitas' %}
+                        <div class="mhs-1">Mahasiswa</div>
+                        {% else %}
+                        <div class="mhs-1">Komunitas</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="followedKomun">
+                <div class="overlap-grup-1">
+                    <div class="komunitasYangDiikuti">Komunitas yang diikuti</div>
+                    <img class="line-6" src="{% static 'real/Line-6.svg'%}" alt="Line 6">
+                    
+                    {% for item in komun %}
+                    <div class="folcmnt">
+                        <div class="komun-1">
+                            <div class="flex-col">
+                                <div class="csi">{{item.nama}}</div>
+                                {% comment %} <div class="jmlhAnggota">500 Anggota</div> {% endcomment %}
+                                <div class="flwdButton">
+                                    <img src="{% static 'real/check-line 1.svg' %}" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Joined</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="{{item.profileimg.url}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% comment %} <div class="folcmnt">
+                        <div class="komun-2">
+                            <div class="flex-col">
+                                <div class="agriUX">AgriUX</div>
+                                <div class="jmlhAnggota">500 Anggota</div>
+                                <div class="flwdButton">
+                                    <img src="{% static 'real/check-line 1.svg' %}" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Diikuti</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="{% static 'real/logo_AgriUX 1.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="folcmnt">
+                        <div class="komun-3">
+                            <div class="flex-col">
+                                <div class="agribot">Agribot </div>
+                                <div class="jmlhAnggota">500 Anggota</div>
+                                <div class="flwdButton">
+                                    <img src="{% static 'real/check-line 1.svg' %}" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Diikuti</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="{% static 'real/logo_agribot.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
