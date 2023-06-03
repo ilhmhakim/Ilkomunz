@@ -26,9 +26,9 @@
             </div>
             <div class="navbar-comp">
                 <div class="bg"></div>
-                <button class="x-active" onclick="location.href='/'" type="button">
+                <button class="x-unactive" onclick="location.href='/'" type="button">
                     <div class="content">
-                        <img class="ui" src="{% static 'real/beranda_ico.svg' %}" alt="beranda-ico">
+                        <img class="ui" src="{% static 'real/beranda_unactive.svg' %}" alt="beranda-ico">
                         <div class="beranda">Beranda</div>
                     </div>
                 </button>
@@ -38,13 +38,13 @@
                         <div class="komunitas">Komunitas</div>
                     </div>
                 </button>
-                <button class="x-unactive" onclick="location.href='presensipage'" type="button">
+                <button class="x-active" onclick="location.href='presensipage'" type="button">
                     <div class="content">
-                        <img class="ui" src="{% static 'real/presensi_ico.svg' %}" alt="presensi_ico">
+                        <img class="ui" src="{% static 'real/presensi-active.svg' %}" alt="presensi_ico">
                         <div class="presensi">Presensi</div>
                     </div>
                 </button>
-                <button class="x-unactive" onclick="location.href='openArtikel'" type="button">
+                <button class="x-unactive" onclick="location.href='artikelpage'" type="button">
                     <div class="content">
                         <img class="ui" src="{% static 'real/article_ico.svg' %}" alt="article_ico">
                         <div class="artikel">Artikel</div>
@@ -81,7 +81,9 @@
                 </div>
                 {% for key,value in dict.items %}
                     {% if item.kegiatan == key %}
-                    <h2 class="hadirPresensi">{{value}} Presensi</h2>
+                    <div class="daftarPresensi">
+                        <span class="hadirPresensi">{{value}} Presensi</span>
+                    </div>
                     {% endif %}
                 {% endfor %}
                 <h2 class="pertemuan">{{item.kegiatan}}</h2>
@@ -97,6 +99,52 @@
                 </div></a>
             </div>
     </section>
+
+    <style>
+        .x-unactive {
+            border-style: double;
+        }
+
+        .presensi {
+            color: #FFFFFF;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: -1px;
+            position: relative;
+            white-space: nowrap;
+            width: 130px;
+        }
+
+        .beranda {
+            letter-spacing: 0;
+            line-height: 24px;
+            color: #181E22;
+            margin-top: -1px;
+            position: relative;
+            white-space: nowrap;
+            width: 130px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .agriUXbar {
+            position: absolute;
+            margin-left: 95px;
+            margin-top: 40px;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+        }
+
+        .daftarPresensi {
+            margin-top: 80px;
+        }
+    </style>
 
     <section class="frameKanan">
         <div class="frameDalem">
