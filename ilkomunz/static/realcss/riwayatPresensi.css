@@ -1287,6 +1287,7 @@ html {
     border-width: 1px 0px;
     border-style: solid;
     border-color: #E3E8EF;
+    b
 }
 
 .pertemuan {
@@ -1361,6 +1362,6 @@ html {
     line-height: 20px;
     color: #828282;
     flex: none;
-    order: 1;
+    order: 0;
     flex-grow: 0;
 }

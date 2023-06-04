@@ -77,20 +77,16 @@
                 <div class="lineDiv"> </div>
             </section>
                 {% for item in pertemuan_list reversed %}
-                <div class="boxRiwayat">
-                </div>
-                {% for key,value in dict.items %}
-                    {% if item.kegiatan == key %}
-                    <div class="daftarPresensi">
-                        <span class="hadirPresensi">{{value}} Presensi</span>
-                    </div>
-                    {% endif %}
-                {% endfor %}
                 <h2 class="pertemuan">{{item.kegiatan}}</h2>
                 <h2 class="tanggal">{{ item.time_created|date:'l' }}, {{ item.time_created|date:'Y-m-d' }}</h2>
                 <br>
                 <h2 class="ruangan">{{item.tempat}}</h2>
                 <img src="{% static 'real/Activity.png'%}" class="gambarPresensiDone" alt="">
+                {% for key,value in dict.items %}
+                    {% if item.kegiatan == key %}
+                    <h2 class="hadirPresensi">{{value}} Presensi</h2>
+                    {% endif %}
+                {% endfor %}
                 {% endfor %}
 
                 <a href="presensiadd"><div>

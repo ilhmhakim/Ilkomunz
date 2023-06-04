@@ -83,18 +83,18 @@
                 </div>
                 <h2 class="persentaseHadir">{{percentage}}%</h2>
                 <h1 class="kehadiranPresensi">Kehadiran</h1>
-                <div class="lineDiv"> </div>
             </section>
-            {% for item in pertemuan_list %}
             <div class="boxRiwayat"></div>
+            {% for item in pertemuan_list %}
             <h2 class="pertemuan">{{item.kegiatan}}</h2>
             <h2 class="tanggal">{{ item.time_created|date:'l' }}, {{ item.time_created|date:'Y-m-d' }}</h2>
             <br>
             <h2 class="ruangan">{{item.tempat}}</h2>
-            <img src="{% static 'real/Tick Square.png'%}" class="gambarPresensiDone" alt="">
             {% if item.kegiatan in kegiatan_list %}
+            <img src="{% static 'real/Tick Square.png'%}" class="gambarPresensiDone" alt="">
             <h2 class="hadirPresensi">Hadir</h2>
             {% else %}
+            <img src="{% static 'real/x_red.svg'%}" class="gambarPresensiDone" alt="">
             <h2 class="hadirPresensi">Tidak Hadir</h2>
             {% endif %}
             {% endfor %}

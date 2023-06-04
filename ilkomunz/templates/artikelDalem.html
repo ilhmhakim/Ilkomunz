@@ -153,6 +153,32 @@
                         </div>
                     </div>
                     {% endfor %}
+                </div>
+            </div>
+            
+            
+            <div class="followedKomun">
+                <div class="overlap-grup-1">
+                    <div class="komunitasYangDiikuti">Komunitas yang diikuti</div>
+                    <img class="line-6" src="{% static 'real/Line-6.svg'%}" alt="Line 6">
+                    
+                    {% for item in komun %}
+                    <div class="folcmnt">
+                        <div class="komun-1">
+                            <div class="flex-col">
+                                <div class="csi">{{item.nama}}</div>
+                                {% comment %} <div class="jmlhAnggota">500 Anggota</div> {% endcomment %}
+                                <div class="flwdButton">
+                                    <img src="{% static 'real/check-line 1.svg' %}" alt="check-line 1" class="check-line-1">
+                                    <div class="diikuti">Joined</div>
+                                </div>
+                            </div>
+                            <div class="logoKomun">
+                                <img src="{{item.profileimg.url}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
                     {% comment %} <div class="folcmnt">
                         <div class="komun-2">
                             <div class="flex-col">

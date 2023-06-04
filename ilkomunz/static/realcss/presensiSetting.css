@@ -1353,10 +1353,10 @@ html {
 }
 
 .hadirPresensi {
-    margin-left: 460px;
-    margin-top: 60px;
-    width: 79px;
+    width: 35px;
     height: 20px;
+    margin-left: 500px;
+    margin-top: 0px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
@@ -1364,7 +1364,7 @@ html {
     line-height: 20px;
     color: #828282;
     flex: none;
-    order: 1;
+    order: 0;
     flex-grow: 0;
 }
 

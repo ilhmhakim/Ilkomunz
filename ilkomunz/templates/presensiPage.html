@@ -126,6 +126,9 @@
             </div>
             <div>
         </button>
+        {%for message in messages%}
+        <h1 class="errormsg">{{message}}</h1>
+        {% endfor %}
         <button class="buttonRiwayatPresensi" type="button" onclick="location.href='riwayatpresensi'">
             <h1 class="tulisanButtonRiwayatPresensi">Riwayat Presensi</h1>
         </button>
@@ -138,9 +141,6 @@
         <div class="frameDalem">
             <div class="myProfile">
                 <div class="judulAtas">
-                    {%for message in messages%}
-                    <h5>{{message}}</h5>
-                    {% endfor %}
                     <h1 class="title">Profil Saya</h1>
                     <button class="go-to-settings" onclick="action.href='#'" type="button">
                         <img class="iconGear" src="{% static 'real/Icon nonActive.svg'%}" alt="iconGear">

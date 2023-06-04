@@ -1,6 +1,7 @@
-html{
+html {
     background-color: #FCFCFD;
 }
+
 
 /* Top Bar (Search Bar & Notification) */
 
@@ -11,8 +12,6 @@ html{
     position: relative;
     width: fit-content;
 }
-
-
 
 .cariKomunitas {
     color: #697586;
@@ -27,7 +26,7 @@ html{
     width: fit-content;
 }
 
-.notification{
+.notification {
     align-items: flex-start;
     background-color: #FFFFFF;
     border: 1px solid;
@@ -53,7 +52,9 @@ html{
     position: relative;
 }
 
+
 /* Navbar */
+
 .navbar-ver-1 {
     height: 1024px;
     left: 0;
@@ -279,7 +280,9 @@ html{
     width: fit-content;
 }
 
+
 /* Tempat Postingan */
+
 .post-card {
     align-items: flex-start;
     margin-left: 269px;
@@ -447,7 +450,9 @@ html{
     position: relative;
 }
 
+
 /* Card Postingan */
+
 .card-postingan {
     align-items: flex-start;
     background-color: #FFFFFF;
@@ -732,7 +737,9 @@ html{
     background-image: url(Assets/Chat_clicked.svg);
 }
 
+
 /* Section Frame Kanan */
+
 .frameKanan {
     align-items: flex-start;
     background-color: #FFFFFF;
@@ -1053,7 +1060,7 @@ html{
     color: #181E22;
 }
 
-.agriUXbar{
+.agriUXbar {
     position: absolute;
     width: 115px;
     height: 44px;
@@ -1066,10 +1073,9 @@ html{
     line-height: 44px;
     color: #36597D;
     text-decoration: none;
-
 }
 
-.csiBar{  
+.csiBar {
     position: absolute;
     width: 35px;
     height: 28px;
@@ -1082,9 +1088,9 @@ html{
     line-height: 28px;
     color: #B4B4B4;
     text-decoration: none;
-    }
+}
 
-.agribotBar{
+.agribotBar {
     position: absolute;
     width: 74px;
     height: 28px;
@@ -1099,7 +1105,7 @@ html{
     text-decoration: none;
 }
 
-.presensiButton1{
+.presensiButton1 {
     position: absolute;
     left: 370px;
     top: 280px;
@@ -1112,7 +1118,7 @@ html{
     align-items: center;
 }
 
-.presensiButton2{
+.presensiButton2 {
     display: flex;
     margin-left: 40.6px;
     margin-top: 40.6px;
@@ -1141,11 +1147,11 @@ html{
     background-image: url(Assets/check-fill-active.svg);
 }
 
-.presensiButton2:active{
-    transform:skewX;
+.presensiButton2:active {
+    transform: skewX;
 }
 
-.presensiTeks{
+.presensiTeks {
     width: 258.75px;
     height: 253.74px;
     font-family: 'Roboto';
@@ -1164,7 +1170,7 @@ html{
     justify-content: center;
 }
 
-.buttonRiwayatPresensi{
+.buttonRiwayatPresensi {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1182,7 +1188,17 @@ html{
     border: none;
 }
 
-.tulisanButtonRiwayatPresensi{
+.errormsg {
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: red;
+}
+
+.tulisanButtonRiwayatPresensi {
     width: 124px;
     height: 24px;
     font-family: 'Roboto';
@@ -1196,10 +1212,10 @@ html{
     color: #36597D;
     flex: none;
     order: 0;
-    flex-grow: 0; 
+    flex-grow: 0;
 }
 
-.dropdownPertemuan{
+.dropdownPertemuan {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -1223,7 +1239,7 @@ html{
     color: #36597D;
 }
 
-.optiondropdown{
+.optiondropdown {
     width: 102px;
     height: 24px;
     font-family: 'Roboto';
