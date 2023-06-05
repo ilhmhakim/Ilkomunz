@@ -159,7 +159,11 @@
                     </div>
                     <div class="nama-status">
                         <a href="profile/{{user_profile.user.username}}"><div class="nameMhs">{{user_profile.nama}}</div></a>
+                        {% if user_profile.tipe == 'komunitas' %}
+                        <div class="mhs-1">Komunitas</div>
+                        {% else %}
                         <div class="mhs-1">Mahasiswa</div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

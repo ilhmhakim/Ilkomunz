@@ -91,11 +91,11 @@
                 {% csrf_token %}
                 <input type="hidden" value="{{user.buka}}" name="buka"/>
                 <input type="hidden" value="{{user.username}}" name="user"/> {% endcomment %}
-                {%if not tes and follower_profile.tipe == 'user' and user_profile.buka == 1%}
+                {%if not tes and follower_profile.tipe == 'user' and user_profile.buka == 1 and user_profile.tipe == 'komunitas'%}
                 <a class="req-join" target = "_blank" href="https://ipb.link/daftar-komun-csi-ilkomunz">
                     <p>Request Join</p>
                 </a>
-                {%elif tes and follower_profile.tipe == 'user'%}
+                {%elif tes and follower_profile.tipe == 'user' and user_profile.tipe == 'komunitas'%}
                 <button class="req-join">
                     <p>Joined</p>
                 </button>

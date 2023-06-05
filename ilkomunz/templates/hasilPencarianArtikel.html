@@ -15,7 +15,7 @@
     <form action="/searchartikel" method="POST">
         {% csrf_token %}
         <section class="topBar">
-            <input class="searchBar contentSB cariKomunitas" type="text" name="username" placeholder="Cari AArtikel">
+            <input class="searchBar contentSB cariKomunitas" type="text" name="username" placeholder="Cari Artikel">
             <img class="searchIcon" src="{% static 'real/light.svg' %}" alt="searchIcon">
             <button class="notification" onclick="location.href='notification'" type="button">
                 <div class="iconNotif"><img src="{% static 'real/notification.svg' %}"></div>
@@ -294,9 +294,9 @@
                     <div class="nama-status">
                         <div class="nameMhs">{{user_profile.nama}}</div>
                         {% if user_profile.tipe == 'komunitas' %}
-                        <div class="mhs-1">Mahasiswa</div>
-                        {% else %}
                         <div class="mhs-1">Komunitas</div>
+                        {% else %}
+                        <div class="mhs-1">Mahasiswa</div>
                         {% endif %}
                     </div>
                 </div>

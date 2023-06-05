@@ -49,25 +49,25 @@
             </div>
             <div class="navbar-comp">
                 <div class="bg"></div>
-                <button class="x-active" onclick="location.href='homepage.html'" type="button">
+                <button class="x-unactive" onclick="location.href='/'" type="button">
                     <div class="content">
-                        <img class="ui" src="{% static 'real/beranda_ico.svg' %}" alt="beranda-ico">
+                        <img class="ui" src="{% static 'real/beranda_unactive.svg' %}" alt="beranda-ico">
                         <div class="beranda">Beranda</div>
                     </div>
                 </button>
-                <button class="x-unactive" onclick="location.href='#'" type="button">
+                <button class="x-unactive" onclick="location.href='komunitas'" type="button">
                     <div class="content">
                         <img class="ui" src="{% static 'real/Community_ico.svg' %}" alt="Community_ico">
                         <div class="komunitas">Komunitas</div>
                     </div>
                 </button>
-                <button class="x-unactive" onclick="location.href='presensiPage.html'" type="button">
+                <button class="x-active" onclick="location.href='presensiPage'" type="button">
                     <div class="content">
-                        <img class="ui" src="{% static 'real/presensi_ico.svg' %}" alt="presensi_ico">
+                        <img class="ui" src="{% static 'real/presensi-active.svg' %}" alt="presensi_ico">
                         <div class="presensi">Presensi</div>
                     </div>
                 </button>
-                <button class="x-unactive" onclick="location.href='openArtikel.html'" type="button">
+                <button class="x-unactive" onclick="location.href='artikelpage'" type="button">
                     <div class="content">
                         <img class="ui" src="{% static 'real/article_ico.svg' %}" alt="article_ico">
                         <div class="artikel">Artikel</div>
@@ -103,15 +103,48 @@
         </div>
     </section>
 
+    <style>
+        .x-unactive {
+            border-style: double;
+        }
+
+        .presensi {
+            color: #FFFFFF;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: -1px;
+            position: relative;
+            white-space: nowrap;
+            width: 130px;
+        }
+
+        .beranda {
+            letter-spacing: 0;
+            line-height: 24px;
+            color: #181E22;
+            margin-top: -1px;
+            position: relative;
+            white-space: nowrap;
+            width: 130px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    </style>
 
     <section class="frameKanan">
         <div class="frameDalem">
             <div class="myProfile">
                 <div class="judulAtas">
                     <h1 class="title">Profil Saya</h1>
-                    <button class="go-to-settings" onclick="action.href='#'" type="button">
-                        <img class="iconGear" src="{% static 'Assets/Icon nonActive.svg'%}" alt="iconGear">
-                    </button>
+                    {% comment %} <button class="go-to-settings" onclick="action.href='#'" type="button">
+                        <img class="iconGear" src="{% static 'real/Icon nonActive.svg'%}" alt="iconGear">
+                    </button> {% endcomment %}
                 </div>
                 <div class="profileCard">
                     <div class="overlap-group">
@@ -122,9 +155,9 @@
                     <div class="nama-status">
                         <div class="nameMhs">{{user_profile.nama}}</div>
                         {% if user_profile.tipe == 'komunitas' %}
-                        <div class="mhs-1">Mahasiswa</div>
-                        {% else %}
                         <div class="mhs-1">Komunitas</div>
+                        {% else %}
+                        <div class="mhs-1">Mahasiswa</div>
                         {% endif %}
                     </div>
                 </div>

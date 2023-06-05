@@ -117,14 +117,14 @@
                         <img class="line-7" src="{% static 'real/Line-7.svg'%}" alt="Line 7">
                         <div class="rect-405"><img width="280" height="75" src="{{artikel_creator.sampulimg.url}}"></div>
                         <div class="profile-2"></div>
-                        <a href="profile/{{user_profile.user.username}}" class="profile-2"><img heighy="100" width ="100"src="{{artikel_creator.profileimg.url}}" alt="profile-2"></a>
+                        <a href="profile/{{artikel_creator.user.username}}" class="profile-2"><img heighy="100" width ="100"src="{{artikel_creator.profileimg.url}}" alt="profile-2"></a>
                     </div>
                     <div class="nama-status">
-                        <div class="nameMhs">{{user_profile.nama}}</div>
-                        {% if user_profile.tipe == 'komunitas' %}
-                        <div class="mhs-1">Mahasiswa</div>
-                        {% else %}
+                        <div class="nameMhs">{{artikel_creator.nama}}</div>
+                        {% if artikel_creator.tipe == 'komunitas' %}
                         <div class="mhs-1">Komunitas</div>
+                        {% else %}
+                        <div class="mhs-1">Mahasiswa</div>
                         {% endif %}
                     </div>
                 </div>
